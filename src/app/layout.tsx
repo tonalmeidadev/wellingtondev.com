@@ -1,7 +1,8 @@
-import './globals.css'
-import { Metadata } from 'next'
-
+import '@/app/globals.css'
+import type { Metadata } from 'next'
+import { i18n } from '@/config/i18n.config'
 import { clash_display, panchang } from '@/app/_utils/fonts'
+import { cookies } from 'next/headers'
 
 export const metadata: Metadata = {
   title: {
@@ -10,19 +11,20 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
+  const cookieStore = cookies()
+  const locale = cookieStore.get('NEXT_LOCALE')?.value || i18n.defaultLocale
+
   return (
     <html
-      lang="en-US"
+      lang={locale}
       className={`${clash_display.variable} ${panchang.variable}`}
     >
-      <body>
-                  {children}
-      </body>
+      <body>{children}</body>
     </html>
   )
 }
