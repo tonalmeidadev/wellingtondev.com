@@ -1,8 +1,7 @@
 import '@/app/globals.css'
 import type { Metadata } from 'next'
 import { clash_display, panchang } from '@/utils/fonts'
-import { i18n } from '@/config/i18n.config'
-import { cookies } from 'next/headers'
+import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
 
 export const metadata: Metadata = {
   title: {
@@ -11,13 +10,12 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const cookieStore = cookies()
-  const locale = cookieStore.get('NEXT_LOCALE')?.value || i18n.defaultLocale
+  const { locale } = await getLocaleAndDictionaryServer()
 
   return (
     <html

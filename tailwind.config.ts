@@ -28,6 +28,9 @@ const config: Config = {
         progressBar: 'progressBar 7s linear forwards',
         slideIn: 'slideIn 200ms ease-in',
       },
+      screens: {
+        xs: '512px',
+      },
     },
   },
   plugins: [],
