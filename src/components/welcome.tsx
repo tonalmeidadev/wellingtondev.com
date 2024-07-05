@@ -64,7 +64,7 @@ export async function Welcome() {
         <Available />
 
         <Link
-          href="/"
+          href="/home"
           className="group mt-16 flex h-6 w-fit items-center text-zinc-400 hover:text-zinc-50"
         >
           <span className="text-[13px] leading-4 tracking-wide transition-all duration-500">

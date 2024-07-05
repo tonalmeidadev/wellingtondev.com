@@ -23,7 +23,7 @@ export function Language({ currentLocale }: LanguageProps) {
           key={lng}
           disabled={currentLocale === lng}
           aria-hidden={currentLocale === lng}
-          className="text-xs uppercase transition-colors duration-500 text-zinc-50 disabled:text-zinc-600"
+          className="text-xs uppercase transition-colors duration-500 text-zinc-600 disabled:text-zinc-50"
           onClick={() => changeLanguage(lng as Locale)}
         >
           {lng === 'en-US' ? 'en-US' : 'pt-BR'}

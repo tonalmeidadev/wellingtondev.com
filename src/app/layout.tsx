@@ -2,6 +2,7 @@ import '@/app/globals.css'
 import type { Metadata } from 'next'
 import { clash_display, panchang } from '@/utils/fonts'
 import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
+import { Crosshair } from '@/components/crosshair'
 
 export const metadata: Metadata = {
   title: {
@@ -22,7 +23,10 @@ export default async function RootLayout({
       lang={locale}
       className={`${clash_display.variable} ${panchang.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Crosshair />
+      </body>
     </html>
   )
 }

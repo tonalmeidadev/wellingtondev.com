@@ -6,9 +6,9 @@ export async function Answers() {
   const { dictionary } = await getLocaleAndDictionaryServer()
 
   const answers = [
-    { idx: 'a', text: dictionary.answers.one },
-    { idx: 'b', text: dictionary.answers.two },
-    { idx: 'c', text: dictionary.answers.three },
+    { idx: 'a', path: '/works/highlight', text: dictionary.answers.one },
+    { idx: 'b', path: '/profile', text: dictionary.answers.two },
+    { idx: 'c', path: '/get-in-touch', text: dictionary.answers.three },
   ]
 
   return (
@@ -17,7 +17,7 @@ export async function Answers() {
         {answers.map((item, index) => (
           <li key={index} className="w-full h-14 flex">
             <Link
-              href="/"
+              href={item.path}
               className="flex w-full px-7 gap-3 border group border-zinc-700 rounded h-full items-center justify-between transition-all duration-500 hover:px-4 hover:border-zinc-50"
             >
               <span className="text-zinc-600 size-4 flex items-center justify-center text-sm group-hover:text-zinc-50 group-active:text-zinc-50 transition-colors duration-500">

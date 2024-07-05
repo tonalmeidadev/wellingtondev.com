@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-  @apply bg-zinc-900 text-zinc-50 font-clash_display;
+  @apply bg-zinc-900 text-zinc-50 font-clash_display selection:bg-zinc-700;
 }
