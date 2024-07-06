@@ -11,12 +11,12 @@ export function Crosshair() {
 
   const springX = useSpring(mouseX, {
     stiffness: 1000,
-    damping: 30,
+    damping: 40,
   })
 
   const springY = useSpring(mouseY, {
     stiffness: 1000,
-    damping: 30,
+    damping: 40,
   })
 
   const topH = useTransform(springY, (y) => `calc(${y}px - 8px)`)
@@ -58,19 +58,19 @@ export function Crosshair() {
       )}
     >
       <motion.div
-        className="fixed left-0 bg-zinc-300/5 pointer-events-none"
+        className="pointer-events-none fixed left-0 bg-zinc-300/5"
         style={{ height: topH, top: 0, width: '1px', x: springX }}
       />
       <motion.div
-        className="fixed left-0 bg-zinc-300/5 pointer-events-none"
+        className="pointer-events-none fixed left-0 bg-zinc-300/5"
         style={{ height: bottomH, bottom: 0, width: '1px', x: springX }}
       />
       <motion.div
-        className="fixed top-0 bg-zinc-300/5 pointer-events-none"
+        className="pointer-events-none fixed top-0 bg-zinc-300/5"
         style={{ width: leftW, left: 0, height: '1px', y: springY }}
       />
       <motion.div
-        className="fixed top-0 bg-zinc-300/5 pointer-events-none"
+        className="pointer-events-none fixed top-0 bg-zinc-300/5"
         style={{ width: rightW, right: 0, height: '1px', y: springY }}
       />
     </div>

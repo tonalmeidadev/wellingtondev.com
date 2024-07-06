@@ -23,10 +23,16 @@ const config: Config = {
           from: { transform: 'translateY(1rem)' },
           to: { transform: 'translateY(0)' },
         },
+        compass: {
+          '0%': { transform: 'scale(1) rotate(0deg)' },
+          '50%': { transform: 'scale(1) rotate(80deg)' },
+          '100%': { transform: 'scale(1) rotate(-180deg)' },
+        },
       },
       animation: {
         progressBar: 'progressBar 7s linear forwards',
         slideIn: 'slideIn 200ms ease-in',
+        compass: 'compass 2s alternate infinite',
       },
       screens: {
         xs: '512px',

@@ -12,21 +12,21 @@ export async function Answers() {
   ]
 
   return (
-    <nav className="w-full flex">
-      <ul className="flex flex-col gap-1 w-full">
+    <nav className="flex w-full">
+      <ul className="flex w-full flex-col gap-1">
         {answers.map((item, index) => (
-          <li key={index} className="w-full h-14 flex">
+          <li key={index} className="flex h-14 w-full">
             <Link
               href={item.path}
-              className="flex w-full px-7 gap-3 border-b group border-zinc-700 h-full items-center justify-between transition-all duration-500 hover:px-4 hover:border-zinc-50"
+              className="group flex h-full w-full items-center justify-between gap-3 border-b border-zinc-700 px-7 transition-all duration-500 hover:border-zinc-50 hover:px-4"
             >
-              <span className="text-zinc-600 size-4 flex items-center justify-center text-sm group-hover:text-zinc-50 group-active:text-zinc-50 transition-colors duration-500">
+              <span className="flex size-4 items-center justify-center text-sm text-zinc-600 transition-colors duration-500 group-hover:text-zinc-50 group-active:text-zinc-50">
                 {item.idx}
               </span>
-              <span className="text-sm flex-grow leading-4">{item.text}</span>
+              <span className="flex-grow text-sm leading-4">{item.text}</span>
               <MoveRight
                 size={16}
-                className="text-zinc-600 group-hover:text-zinc-50 group-active:text-zinc-50 transition-colors duration-500"
+                className="text-zinc-600 transition-colors duration-500 group-hover:text-zinc-50 group-active:text-zinc-50"
               />
             </Link>
           </li>
