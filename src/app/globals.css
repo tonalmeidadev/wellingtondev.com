@@ -5,3 +5,7 @@
 body {
   @apply bg-zinc-900 text-zinc-50 font-clash_display selection:bg-zinc-700;
 }
+
+a, button {
+  @apply focus-visible:outline-transparent;
+}

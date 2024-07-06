@@ -18,7 +18,7 @@ export async function Answers() {
           <li key={index} className="w-full h-14 flex">
             <Link
               href={item.path}
-              className="flex w-full px-7 gap-3 border group border-zinc-700 rounded h-full items-center justify-between transition-all duration-500 hover:px-4 hover:border-zinc-50"
+              className="flex w-full px-7 gap-3 border-b group border-zinc-700 h-full items-center justify-between transition-all duration-500 hover:px-4 hover:border-zinc-50"
             >
               <span className="text-zinc-600 size-4 flex items-center justify-center text-sm group-hover:text-zinc-50 group-active:text-zinc-50 transition-colors duration-500">
                 {item.idx}

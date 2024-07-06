@@ -10,12 +10,12 @@ export function Crosshair() {
   const [opacity, setOpacity] = useState(false)
 
   const springX = useSpring(mouseX, {
-    stiffness: 300,
+    stiffness: 1000,
     damping: 30,
   })
 
   const springY = useSpring(mouseY, {
-    stiffness: 300,
+    stiffness: 1000,
     damping: 30,
   })
 
@@ -33,11 +33,7 @@ export function Crosshair() {
     const handleMouseHover = (event: MouseEvent, isHover: boolean) => {
       const target = event.target as HTMLElement
 
-      if (
-        target.closest('a') ||
-        (target.closest('button') && !(target as HTMLButtonElement).disabled)
-      )
-        setOpacity(isHover)
+      if (target.closest('a') || target.closest('button')) setOpacity(isHover)
     }
 
     const handleMouseOver = (event: MouseEvent) => handleMouseHover(event, true)
@@ -62,19 +58,19 @@ export function Crosshair() {
       )}
     >
       <motion.div
-        className="fixed left-0 bg-zinc-700/25 pointer-events-none"
+        className="fixed left-0 bg-zinc-300/5 pointer-events-none"
         style={{ height: topH, top: 0, width: '1px', x: springX }}
       />
       <motion.div
-        className="fixed left-0 bg-zinc-700/25 pointer-events-none"
+        className="fixed left-0 bg-zinc-300/5 pointer-events-none"
         style={{ height: bottomH, bottom: 0, width: '1px', x: springX }}
       />
       <motion.div
-        className="fixed top-0 bg-zinc-700/25 pointer-events-none"
+        className="fixed top-0 bg-zinc-300/5 pointer-events-none"
         style={{ width: leftW, left: 0, height: '1px', y: springY }}
       />
       <motion.div
-        className="fixed top-0 bg-zinc-700/25 pointer-events-none"
+        className="fixed top-0 bg-zinc-300/5 pointer-events-none"
         style={{ width: rightW, right: 0, height: '1px', y: springY }}
       />
     </div>
