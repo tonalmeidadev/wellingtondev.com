@@ -9,8 +9,9 @@ const button = cva(
   {
     variants: {
       variant: {
-        primary: 'border-b border-zinc-700 hover:border-zinc-50',
-        secondary: 'border border-zinc-800 bg-zinc-800 hover:border-zinc-50',
+        primary: 'border-b border-neutral-700 hover:border-neutral-50',
+        secondary:
+          'border border-neutral-800 bg-neutral-800 hover:border-neutral-50',
       },
     },
   },

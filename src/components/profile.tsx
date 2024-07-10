@@ -39,7 +39,7 @@ export async function Profile({ orientation, size }: ProfileProps) {
         </span>
         <span
           className={clsx(
-            'text-zinc-400',
+            'text-neutral-400',
             size === 'sm' && 'text-[11px]',
             size === 'lg' && 'text-[13px]',
           )}

@@ -6,6 +6,16 @@ export const ptBR = {
     copy: 'Copiado',
     next: 'Pular',
   },
+  profile: {
+    alt: 'Foto de Welington tocando piano',
+    description:
+      'Desenvolvimento de interfaces para web, aplicativos móveis, pwa (progressive web app), apoio em criações de UI/UX.',
+    biography: [
+      `Nasci e cresci em São Paulo — SP, tenho 26 anos de idade, muita energia e paixão pelo que faço. Descobri ainda na minha adolescência que a tecnologia era pra mim quando me divertia editando templates no Tumblr, usando HTML e CSS.`,
+      `Ao longo da minha carreira em tecnologia, explorei outras áreas relacionadas a website que me permitiu ter ampla visão sobre arquitetura, processos de desenvolvimento e pessoas. Além da codificação, atuei na prototipação e re-design de interfaces, implementei estratégias de SEO, lidei com social media e cooperei em processos de gerenciamento com framework Scrum.`,
+      `Minha meta é sempre estar focado desde os mínimos detalhes e criar soluções funcionais e responsivas onde design, movimento, interação e acessibilidade se integram perfeitamente.`,
+    ],
+  },
   answers: {
     one: `"Soube que você está construindo algo incrível"`,
     two: `"Quero saber mais sobre seu trabalho"`,
@@ -13,35 +23,97 @@ export const ptBR = {
   },
   biography: {
     one: 'Olá, sou Wellington, um desenvolvedor Front-end que aprecia UX e sites acessíveis, constrói produtos digitais e  que vive em São Paulo.',
-    two: 'Sou especializado em criar websites do zero e posso contribuir com projetos desde o design até o código em React e Next.js.',
+    two: 'Sou especializado em criar websites do zero e posso contribuir com projetos desde o design até o código em React/Next.js.',
   },
-  experiences: {
-    title: 'Experiências',
-    freelance: {
-      one: {
-        date: `O momento`,
-      },
+  works: {
+    titles: {
+      experiences: 'Experiências',
+      volunteering: 'Voluntariado',
+      works: 'Trabalhos',
     },
-    smartbrain: {
-      one: {
-        date: `Abr'2024`,
-      },
+    experiences: {
+      defaults: [
+        {
+          startDate: `Out'2021`,
+          endDate: `O momento`,
+          company: 'Freelance',
+          occupation: 'Front-end Developer',
+        },
+        {
+          startDate: `Set'2023`,
+          endDate: `Abr'2024`,
+          company: 'Smartbrain Financial Systems',
+          occupation: 'Front-end Developer',
+        },
+        {
+          startDate: `Out'2021`,
+          endDate: `Set'2023`,
+          company: 'Parxtech Informática',
+          occupation: 'Support Analyst',
+        },
+        {
+          startDate: `Nov'2020`,
+          endDate: `Set'2021`,
+          company: 'Parxtech Informática',
+          occupation: 'Front-end Developer',
+        },
+      ],
+      volunteering: [
+        {
+          startDate: `Jan'2023`,
+          endDate: `O momento`,
+          company: 'Igreja ADAI',
+          occupation: 'Front-end Developer',
+        },
+      ],
     },
-    parxtech: {
-      one: {
-        date: `Ago'2023`,
-      },
-      two: {
-        date: `Set'2021`,
-      },
-    },
-  },
-  volunteering: {
-    title: 'Voluntariado',
-    adai: {
-      one: {
-        date: `O momento`,
-      },
+    projects: {
+      defaults: [
+        {
+          path: '/',
+          startDate: `Mai'2024`,
+          endDate: `O momento`,
+          company: 'EBA — Escola Bíblica ADAI',
+          occupation: 'Front-end Developer',
+        },
+        {
+          path: 'https://banco.bradesco/html/classic/produtos-servicos/investimentos/investmais.shtm',
+          startDate: `Set'2023`,
+          endDate: `Abr'2024`,
+          company: 'Invest+ Bradesco',
+          occupation: 'Front-end Developer',
+        },
+        {
+          path: 'https://cadastro.agorainvest.com.br/dados-acesso',
+          startDate: `Set'2023`,
+          endDate: `Abr'2024`,
+          company: 'Ágora Investimentos',
+          occupation: 'Front-end Developer',
+        },
+        {
+          path: '/',
+          startDate: `Jan'2021`,
+          endDate: `Pausado`,
+          company: 'Escola Pequeno Marujo',
+          occupation: 'Front-end Developer',
+        },
+      ],
+      volunteering: [
+        {
+          path: 'https://www.adai.com.br/',
+          startDate: `Jan'2023`,
+          endDate: `O momento`,
+          company: 'Igreja ADAI',
+          occupation: 'Front-end Developer',
+        },
+        {
+          path: 'https://www.movimentoflores.com.br/',
+          startDate: `Jan'2023`,
+          endDate: `Current`,
+          company: 'Movimento Flores',
+          occupation: 'Front-end Developer',
+        },
+      ],
     },
   },
 }

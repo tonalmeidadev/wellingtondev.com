@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  ::-webkit-scrollbar {
+    @apply w-0.5;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-neutral-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gradient-to-t from-neutral-950 to-neutral-600 rounded-sm transition-colors;
+  }
+}
+
 body {
-  @apply bg-zinc-900 text-zinc-50 font-clash_display selection:bg-zinc-700;
+  @apply bg-neutral-900 text-neutral-50 font-clash_display selection:bg-neutral-700;
 }
 
 a, button {

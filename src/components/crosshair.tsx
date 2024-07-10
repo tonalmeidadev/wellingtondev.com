@@ -53,24 +53,24 @@ export function Crosshair() {
   return (
     <div
       className={clsx(
-        'transition-opacity duration-500',
+        'hidden transition-opacity duration-500 md:block',
         opacity ? 'opacity-0' : 'opacity-100',
       )}
     >
       <motion.div
-        className="pointer-events-none fixed left-0 bg-zinc-300/5"
+        className="pointer-events-none fixed left-0 bg-neutral-300/5"
         style={{ height: topH, top: 0, width: '1px', x: springX }}
       />
       <motion.div
-        className="pointer-events-none fixed left-0 bg-zinc-300/5"
+        className="pointer-events-none fixed left-0 bg-neutral-300/5"
         style={{ height: bottomH, bottom: 0, width: '1px', x: springX }}
       />
       <motion.div
-        className="pointer-events-none fixed top-0 bg-zinc-300/5"
+        className="pointer-events-none fixed top-0 bg-neutral-300/5"
         style={{ width: leftW, left: 0, height: '1px', y: springY }}
       />
       <motion.div
-        className="pointer-events-none fixed top-0 bg-zinc-300/5"
+        className="pointer-events-none fixed top-0 bg-neutral-300/5"
         style={{ width: rightW, right: 0, height: '1px', y: springY }}
       />
     </div>

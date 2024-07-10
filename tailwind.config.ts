@@ -15,24 +15,42 @@ const config: Config = {
         panchang: ['var(--font-panchang)'],
       },
       keyframes: {
-        progressBar: {
-          '0%': { width: '100%' },
-          '100%': { width: '0' },
+        'step-1': {
+          '0%, 20%': { opacity: '1' },
+          '25%, 70%': { opacity: '0.3' },
+          '75%, 100%': { opacity: '1' },
         },
-        slideIn: {
-          from: { transform: 'translateY(1rem)' },
-          to: { transform: 'translateY(0)' },
+        'step-2': {
+          '0%, 20%': { opacity: '0.3' },
+          '25%, 70%': { opacity: '1' },
+          '75%, 100%': { opacity: '0.3' },
         },
-        compass: {
+        'slide-date-s': {
+          '0%, 20%': { opacity: '0', transform: 'translateY(2rem)' },
+          '25%, 45%': { opacity: '1', transform: 'translateY(0)' },
+          '50%, 70%': { opacity: '1', transform: 'translateY(0)' },
+          '75%, 95%': { opacity: '0', transform: 'translateY(2rem)' },
+          '100%': { opacity: '0', transform: 'translateY(2rem)' },
+        },
+        'slide-date-e': {
+          '0%, 20%': { opacity: '1', transform: 'translateY(0)' },
+          '25%, 45%': { opacity: '0', transform: 'translateY(-2rem)' },
+          '50%, 70%': { opacity: '0', transform: 'translateY(-2rem)' },
+          '75%, 95%': { opacity: '1', transform: 'translateY(0)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'compass-date': {
           '0%': { transform: 'scale(1) rotate(0deg)' },
           '50%': { transform: 'scale(1) rotate(80deg)' },
           '100%': { transform: 'scale(1) rotate(-180deg)' },
         },
       },
       animation: {
-        progressBar: 'progressBar 7s linear forwards',
-        slideIn: 'slideIn 200ms ease-in',
-        compass: 'compass 2s alternate infinite',
+        'step-1': 'step-1 8s linear infinite',
+        'step-2': 'step-2 8s linear infinite',
+        'slide-date-s': 'slide-date-s 8s linear infinite',
+        'slide-date-e': 'slide-date-e 8s linear infinite',
+        'compass-date': 'compass-date 2s alternate infinite',
       },
       screens: {
         xs: '512px',
@@ -41,4 +59,5 @@ const config: Config = {
   },
   plugins: [],
 }
+
 export default config

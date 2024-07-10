@@ -15,18 +15,20 @@ export async function Answers() {
     <nav className="flex w-full">
       <ul className="flex w-full flex-col gap-1">
         {answers.map((item, index) => (
-          <li key={index} className="flex h-14 w-full">
+          <li key={index} className="flex h-12 w-full">
             <Link
               href={item.path}
-              className="group flex h-full w-full items-center justify-between gap-3 border-b border-zinc-700 px-7 transition-all duration-500 hover:border-zinc-50 hover:px-4"
+              className="group flex h-full w-full items-center justify-between gap-4 px-3 transition-all duration-500 hover:px-5"
             >
-              <span className="flex size-4 items-center justify-center text-sm text-zinc-600 transition-colors duration-500 group-hover:text-zinc-50 group-active:text-zinc-50">
+              <span className="flex size-4 items-center justify-center text-sm text-neutral-600 transition-colors duration-500 group-hover:text-neutral-50">
                 {item.idx}
               </span>
-              <span className="flex-grow text-sm leading-4">{item.text}</span>
+
+              <span className="text-center text-sm leading-4">{item.text}</span>
+
               <MoveRight
                 size={16}
-                className="text-zinc-600 transition-colors duration-500 group-hover:text-zinc-50 group-active:text-zinc-50"
+                className="text-neutral-600 transition-colors duration-500 group-hover:text-neutral-50"
               />
             </Link>
           </li>
