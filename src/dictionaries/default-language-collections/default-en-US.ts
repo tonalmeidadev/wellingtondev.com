@@ -70,7 +70,7 @@ export const enUS = {
     projects: {
       defaults: [
         {
-          path: '/',
+          path: 'https://eba.adai.com.br/',
           startDate: `May'2024`,
           endDate: `Current`,
           company: 'EBA — ADAI Bible School',

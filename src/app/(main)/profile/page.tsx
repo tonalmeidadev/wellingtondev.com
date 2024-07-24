@@ -77,19 +77,21 @@ export default async function ProfilePage() {
           </div>
         </div>
 
-        <section className="mt-16 flex max-w-sm flex-col gap-4">
-          <h2 className="text-[11px] uppercase text-neutral-400">About-me</h2>
+        <section className="mt-16 grid grid-cols-1 lg:grid-cols-2">
+          <div className="flex flex-col gap-4">
+            <h2 className="text-[11px] uppercase text-neutral-400">About-me</h2>
 
-          <div className="flex flex-col gap-3">
-            {biography.map((item, index) => (
-              <p key={index} className="text-sm leading-5">
-                {item}
-              </p>
-            ))}
+            <div className="flex flex-col gap-3">
+              {biography.map((item, index) => (
+                <p key={index} className="text-sm leading-5">
+                  {item}
+                </p>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section className="mt-16 flex max-w-sm flex-col gap-4">
+        <section className="mt-16 flex flex-col gap-4">
           <h2 className="text-[11px] uppercase text-neutral-400">Stack</h2>
 
           <ul className="grid grid-cols-2 gap-2">

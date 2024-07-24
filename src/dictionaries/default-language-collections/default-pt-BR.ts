@@ -70,7 +70,7 @@ export const ptBR = {
     projects: {
       defaults: [
         {
-          path: '/',
+          path: 'https://eba.adai.com.br/',
           startDate: `Mai'2024`,
           endDate: `O momento`,
           company: 'EBA — Escola Bíblica ADAI',

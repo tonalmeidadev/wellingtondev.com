@@ -4,9 +4,11 @@ export async function Biography() {
   const { dictionary } = await getLocaleAndDictionaryServer()
 
   return (
-    <section className="flex max-w-sm flex-col gap-4">
-      <p className="text-sm leading-5">{dictionary.biography.one}</p>
-      <p className="text-sm leading-5">{dictionary.biography.two}</p>
+    <section className="grid grid-cols-1 lg:grid-cols-2">
+      <div className="flex flex-col gap-4">
+        <p className="text-sm leading-5">{dictionary.biography.one}</p>
+        <p className="text-sm leading-5">{dictionary.biography.two}</p>
+      </div>
     </section>
   )
 }

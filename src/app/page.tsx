@@ -6,15 +6,29 @@ import { Profile } from '@/components/profile'
 import { AtSign, CalendarPlus, MoveRight } from 'lucide-react'
 import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
 import { Question } from '@/components/question'
-import { Answers } from '@/components/answers'
 
 export default async function StartPage() {
   const { dictionary, locale } = await getLocaleAndDictionaryServer()
 
   const answers = [
-    { idx: 'a', path: '/works/highlight', text: dictionary.answers.one },
-    { idx: 'b', path: '/profile', text: dictionary.answers.two },
-    { idx: 'c', path: '/get-in-touch', text: dictionary.answers.three },
+    {
+      idx: 'a',
+      path: '/works/highlight',
+      external: false,
+      text: dictionary.answers.one,
+    },
+    {
+      idx: 'b',
+      path: '/profile',
+      external: false,
+      text: dictionary.answers.two,
+    },
+    {
+      idx: 'c',
+      path: 'https://api.whatsapp.com/send?phone=5511960245642',
+      external: true,
+      text: dictionary.answers.three,
+    },
   ]
 
   return (
@@ -62,10 +76,8 @@ export default async function StartPage() {
         </div>
       </header>
 
-      <main className="mb-8 w-full max-w-96 sm:max-w-none">
-        <Question>
-          <Answers answers={answers} />
-        </Question>
+      <main className="mb-8 flex w-full max-w-96 flex-col items-center gap-2 sm:max-w-none">
+        <Question answers={answers} />
       </main>
 
       <footer className="flex w-full flex-col items-center justify-center">
