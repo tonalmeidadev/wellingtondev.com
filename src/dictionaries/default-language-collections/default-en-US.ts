@@ -1,4 +1,7 @@
 export const enUS = {
+  layout: {
+    go_back: 'Go to the homepage',
+  },
   home: {
     available: 'Open to work, get in touch',
     name: 'Hello, World!',

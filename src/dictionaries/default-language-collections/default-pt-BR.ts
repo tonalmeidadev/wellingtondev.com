@@ -1,4 +1,7 @@
 export const ptBR = {
+  layout: {
+    go_back: 'Ir para a página inicial',
+  },
   home: {
     available: 'Aberto para trabalho, entre em contato',
     name: 'Olá, Mundo!',

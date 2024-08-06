@@ -1,7 +1,35 @@
+import Link from 'next/link'
+import { Metadata } from 'next'
 import { Carousel } from '@/components/carousel'
 import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
 import { MoveUpRight } from 'lucide-react'
-import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'EBA Escola Bíblica ADAI',
+  description:
+    'Nesse projeto, atuei principalmente como Front-end Developer, contribuindo também para o desenvolvimento da interface visual (UI) e experiência do usuário (UX).',
+  openGraph: {
+    title: 'EBA Escola Bíblica ADAI — Wellington Almeida | Front-end Developer',
+    description:
+      'Nesse projeto, atuei principalmente como Front-end Developer, contribuindo também para o desenvolvimento da interface visual (UI) e experiência do usuário (UX).',
+    url: 'https://wellingtondev.com',
+  },
+  alternates: {
+    canonical: 'https://wellingtondev.com/work/highlight',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
 
 type WorksHighlight = {
   path: string

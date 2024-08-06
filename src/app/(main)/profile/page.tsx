@@ -1,8 +1,36 @@
-import Image from 'next/image'
-import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
 import Link from 'next/link'
+import Image from 'next/image'
+import { Metadata } from 'next'
+import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
 import { CalendarPlus } from 'lucide-react'
 import { Button } from '@/components/button'
+
+export const metadata: Metadata = {
+  title: 'Profile',
+  description:
+    'Desenvolvimento de interfaces para web, aplicativos móveis, pwa (progressive web app), apoio em criações de UI/UX.',
+  openGraph: {
+    title: 'Profile — Wellington Almeida | Front-end Developer',
+    description:
+      'Desenvolvimento de interfaces para web, aplicativos móveis, pwa (progressive web app), apoio em criações de UI/UX.',
+    url: 'https://wellingtondev.com',
+  },
+  alternates: {
+    canonical: 'https://wellingtondev.com/profile',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
 
 export default async function ProfilePage() {
   const { dictionary } = await getLocaleAndDictionaryServer()

@@ -1,7 +1,35 @@
 import Link from 'next/link'
+import { Metadata } from 'next'
 import { Works } from '@/components/works/works'
 import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
 import { MoveRight } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Works',
+  description:
+    'Um pouco mais sobre o que construí durante a minha carreira como desenvolvedor',
+  openGraph: {
+    title: 'Works — Wellington Almeida | Front-end Developer',
+    description:
+      'Um pouco mais sobre o que construí durante a minha carreira como desenvolvedor',
+    url: 'https://wellingtondev.com',
+  },
+  alternates: {
+    canonical: 'https://wellingtondev.com/works',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
 
 export default async function WorksPage() {
   const { dictionary } = await getLocaleAndDictionaryServer()
@@ -12,7 +40,7 @@ export default async function WorksPage() {
   return (
     <>
       <Link
-        href="/works/highlight"
+        href="/work/highlight"
         className="group flex h-6 w-fit items-center hover:text-neutral-50"
       >
         <span className="text-[13px] leading-4 tracking-wide transition-all duration-500">
