@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   },
   keywords:
     'sites, web, desenvolvedor, developer, front end, javascript, typescript, react, nextjs, css, tailwind, shadcn ui, radix, motion, ux, ui, redux, storybook',
+  metadataBase: new URL('https://wellingtondev.com'),
   openGraph: {
     type: 'website',
     images: [
