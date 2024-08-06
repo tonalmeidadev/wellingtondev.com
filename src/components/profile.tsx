@@ -17,13 +17,13 @@ export async function Profile({ orientation, size }: ProfileProps) {
     >
       <Image
         src="/assets/photo.webp"
-        width={52}
-        height={52}
+        width={128}
+        height={128}
         quality={100}
         className={clsx(
-          'pointer-events-none select-none rounded-full',
+          'pointer-events-none select-none rounded-full border-2 border-neutral-800 contrast-[110%]',
           size === 'sm' && 'h-[72px] w-[72px] md:h-12 md:w-12',
-          size === 'lg' && 'h-[52px] w-[52px]',
+          size === 'lg' && 'h-[64px] w-[64px]',
         )}
         alt="Foto de perfil de Ton Almeida"
       />
