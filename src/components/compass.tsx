@@ -8,9 +8,9 @@ export function Compass() {
       className="group flex w-fit items-center gap-1 text-neutral-400"
       target="_blank"
     >
-      <div className="size-3 overflow-hidden">
+      <div className="flex size-4 items-center justify-center overflow-hidden">
         <CompassIcon
-          size={12}
+          size={14}
           className="animate-compass-date transition-colors group-hover:animate-none group-hover:text-neutral-50"
         />
       </div>

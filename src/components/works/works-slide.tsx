@@ -15,7 +15,7 @@ export function WorkSlide({ startDate, endDate }: WorkSlideProps) {
 
       <div className="right-3 flex items-center justify-end gap-1 xs:absolute xs:w-full xs:animate-slide-date-s md:right-0">
         <span className="text-sm md:text-xs">{startDate}</span>
-        <MoveUp size={12} />
+        <MoveUp size={14} />
       </div>
 
       <div className="h-px w-2.5 bg-neutral-50 xs:hidden" />

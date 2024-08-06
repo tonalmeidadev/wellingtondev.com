@@ -22,7 +22,7 @@ export async function Profile({ orientation, size }: ProfileProps) {
         quality={100}
         className={clsx(
           'pointer-events-none select-none rounded-full',
-          size === 'sm' && 'h-12 w-12',
+          size === 'sm' && 'h-[72px] w-[72px] md:h-12 md:w-12',
           size === 'lg' && 'h-[52px] w-[52px]',
         )}
         alt="Foto de perfil de Ton Almeida"
@@ -31,7 +31,7 @@ export async function Profile({ orientation, size }: ProfileProps) {
       <div className="flex flex-col">
         <span
           className={clsx(
-            size === 'sm' && 'text-[13px] leading-4',
+            size === 'sm' && 'text-lg md:text-[13px] md:leading-4',
             size === 'lg' && 'text-base leading-5',
           )}
         >
@@ -40,7 +40,7 @@ export async function Profile({ orientation, size }: ProfileProps) {
         <span
           className={clsx(
             'text-neutral-400',
-            size === 'sm' && 'text-[11px]',
+            size === 'sm' && 'text-sm md:text-[11px]',
             size === 'lg' && 'text-[13px]',
           )}
         >

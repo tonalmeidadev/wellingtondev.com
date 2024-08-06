@@ -29,7 +29,7 @@ export function Navigation() {
                   <span className="pointer-events-none select-none text-[11px] uppercase text-neutral-400">
                     {item.text}
                   </span>
-                  <Clock size={12} className="text-neutral-400" />
+                  <Clock size={14} className="text-neutral-400" />
                 </button>
               </>
             ) : (
@@ -37,7 +37,7 @@ export function Navigation() {
                 href={item.path}
                 className="flex h-7 w-fit items-center gap-1"
               >
-                {pathname === item.path && <MoveRight size={12} />}
+                {pathname === item.path && <MoveRight size={14} />}
                 <span
                   className={clsx(
                     'text-[11px] uppercase',

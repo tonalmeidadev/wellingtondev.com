@@ -8,7 +8,11 @@ export async function Available() {
   const currentDate = format(new Date(), "MMM''yyyy")
 
   return (
-    <Link href="/" className="group flex w-fit sm:max-w-none sm:items-center">
+    <Link
+      href="https://api.whatsapp.com/send?phone=5511960245642"
+      className="group flex w-fit sm:max-w-none sm:items-center"
+      target="_blank"
+    >
       <div className="mt-[3px] flex size-[9px] items-center justify-center rounded-full bg-neutral-800 sm:mt-0">
         <div className="size-[7px] animate-ping rounded-full bg-neutral-50" />
       </div>

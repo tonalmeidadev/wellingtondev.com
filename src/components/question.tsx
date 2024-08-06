@@ -48,7 +48,7 @@ export function Question({ answers }: QuestionProps) {
           <li key={index} className="flex h-12 w-full">
             <Link
               href={item.path}
-              target={external ? '_blank' : '_self'}
+              target={item.external ? '_blank' : '_self'}
               ref={(el) => {
                 refs.current[index] = el
               }}

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Works } from '@/components/works/works'
 import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
+import { MoveRight } from 'lucide-react'
 
 export default async function WorksPage() {
   const { dictionary } = await getLocaleAndDictionaryServer()
@@ -10,6 +11,20 @@ export default async function WorksPage() {
 
   return (
     <>
+      <Link
+        href="/works/highlight"
+        className="group flex h-6 w-fit items-center hover:text-neutral-50"
+      >
+        <span className="text-[13px] leading-4 tracking-wide transition-all duration-500">
+          {dictionary.works.highlight.button}
+        </span>
+
+        <MoveRight
+          size={16}
+          className="ml-1 transition-all duration-500 group-hover:ml-1"
+        />
+      </Link>
+
       <Works.Root title={dictionary.works.titles.works}>
         {projects.map((item, index) => (
           <>

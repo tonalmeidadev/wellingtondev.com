@@ -21,3 +21,13 @@ body {
 a, button {
   @apply focus-visible:outline-transparent;
 }
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  @apply hidden;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  @apply text-base text-neutral-950 !important;
+}

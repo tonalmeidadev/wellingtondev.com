@@ -19,19 +19,23 @@ export default async function LayoutMain({
       <Sidebar />
 
       <div className="m-auto flex max-w-5xl flex-col-reverse gap-40 px-8 py-8 xs:px-16 md:flex-col">
-        <header className="grid grid-cols-1 items-center gap-4 md:grid-cols-[auto_auto] md:gap-0 lg:grid-cols-2">
-          <div className="flex items-center gap-4 md:gap-8">
+        <header className="grid grid-cols-1 items-center gap-8 md:grid-cols-[auto_auto] md:gap-0 lg:grid-cols-2">
+          <div className="flex items-center gap-6 md:gap-8">
             <Link
               href="/"
               className="flex size-4 items-center justify-center gap-1"
             >
-              <MoveLeft size={12} />
+              <MoveLeft size={14} />
             </Link>
 
             <Language currentLocale={locale} />
           </div>
 
-          <Compass />
+          <div className='flex flex-col gap-8'>
+            <Compass />
+
+            <span className='text-[11px] uppercase text-neutral-400 sm:hidden'>@2024 — Wellington Almeida</span>
+          </div>
         </header>
 
         <main className="flex flex-col gap-16">

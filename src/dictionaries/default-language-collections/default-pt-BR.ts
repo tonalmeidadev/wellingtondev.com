@@ -26,6 +26,10 @@ export const ptBR = {
     two: 'Sou especializado em criar websites do zero e posso contribuir com projetos desde o design até o código em React/Next.js.',
   },
   works: {
+    highlight: {
+      button: 'Em destaque',
+      error: 'Trabalho em destaque não encontrado ou definido.',
+    },
     titles: {
       experiences: 'Experiências',
       volunteering: 'Voluntariado',
@@ -75,19 +79,37 @@ export const ptBR = {
           endDate: `O momento`,
           company: 'EBA — Escola Bíblica ADAI',
           occupation: 'Front-end Developer',
+          highlight: {
+            cta: 'Visitar',
+            description_title: 'Descrição',
+            description: `<p>A Escola Bíblica ADAI (EBA) é uma iniciativa dedicada a apoiar e enriquecer a trajetória cristã de cada indivíduo. O objetivo é proporcionar um aprendizado profundo e significativo da Bíblia, ajudando a fortalecer a fé e a caminhada espiritual dos alunos.</p><br /><p>Este projeto envolve a criação de um site institucional com 4 páginas e dois sistemas internos. O primeiro sistema inclui 5 testes de avaliação para os alunos, enquanto o segundo é um dashboard que oferece funcionalidades de pesquisa de turmas e alunos, além de um CRUD para gerenciá-los. Além disso, o dashboard possui uma sala de aula virtual com 2 cursos em vídeo.</p><br /><p>Nesse projeto, atuei principalmente como Front-end Developer, contribuindo também para o desenvolvimento da interface visual (UI) e experiência do usuário (UX).</p>`,
+            media: {
+              home_title: 'Página inicial',
+              test_title: 'Teste de avaliação dos alunos',
+              dashboard_title: 'Painel de Controle',
+              classrom_title: 'Sala Virtual',
+            },
+          },
         },
         {
           path: 'https://banco.bradesco/html/classic/produtos-servicos/investimentos/investmais.shtm',
           startDate: `Set'2023`,
           endDate: `Abr'2024`,
           company: 'Invest+ Bradesco',
-          occupation: 'Front-end Developer',
+          occupation: 'Front-end Web / PWA Developer',
         },
         {
           path: 'https://cadastro.agorainvest.com.br/dados-acesso',
           startDate: `Set'2023`,
           endDate: `Abr'2024`,
           company: 'Ágora Investimentos',
+          occupation: 'Front-end Web / PWA Developer',
+        },
+        {
+          path: 'https://parxtech.com.br/',
+          startDate: `Fev'2021`,
+          endDate: `Mar'2021`,
+          company: 'Parxtech Website',
           occupation: 'Front-end Developer',
         },
         {
