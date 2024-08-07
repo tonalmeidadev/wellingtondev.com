@@ -99,10 +99,11 @@ export default async function WorksHighlightPage() {
     <>
       <section className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center lg:gap-0">
         <section className="flex flex-col gap-2">
-          <span className="text-xs">
+          <span className="text-sm">
             {work.startDate}, {work.endDate}
           </span>
-          <h1>{work.company}</h1>
+
+          <h1 className="text-lg">{work.company}</h1>
         </section>
 
         <Link
@@ -110,14 +111,11 @@ export default async function WorksHighlightPage() {
           target="_blank"
           className="group flex h-6 w-fit items-center text-neutral-400 hover:text-neutral-50"
         >
-          <span className="text-[13px] leading-4 tracking-wide transition-all duration-500">
+          <span className="leading-4 tracking-wide transition-all duration-500">
             {work.highlight.cta}
           </span>
 
-          <MoveUpRight
-            size={16}
-            className="ml-1 transition-all duration-500 group-hover:ml-1"
-          />
+          <MoveUpRight className="ml-1 size-4 transition-all duration-500 group-hover:ml-2" />
         </Link>
       </section>
 
@@ -126,22 +124,22 @@ export default async function WorksHighlightPage() {
       </section>
 
       <section className="flex flex-col gap-4">
-        <h2 className="text-[11px] uppercase text-neutral-400">
+        <h2 className="text-sm uppercase text-neutral-400">
           {work.highlight.description_title}
         </h2>
 
         <div
-          className="text-sm"
+          className="leading-6"
           dangerouslySetInnerHTML={{ __html: work.highlight.description }}
         />
       </section>
 
       <section className="flex flex-col gap-4">
-        <h2 className="text-[11px] uppercase text-neutral-400">Stack</h2>
+        <h2 className="text-sm uppercase text-neutral-400">Stack</h2>
 
         <ul className="grid grid-cols-2 gap-2">
           {stack.map((item, index) => (
-            <li key={index} className="list-inside list-disc text-sm leading-5">
+            <li key={index} className="list-inside list-disc leading-6">
               {item}
             </li>
           ))}

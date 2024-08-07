@@ -17,30 +17,32 @@ export function Navigation() {
 
   return (
     <nav>
-      <ul className="flex flex-col">
+      <ul className="flex flex-col items-end md:items-start">
         {links.map((item, index) => (
           <li key={index}>
             {item.disabled ? (
               <>
                 <button
                   aria-disabled
-                  className="flex h-6 items-center gap-1 hover:cursor-not-allowed"
+                  className="flex h-8 items-center gap-2 hover:cursor-not-allowed"
                 >
-                  <span className="pointer-events-none select-none text-[11px] uppercase text-neutral-400">
+                  <span className="pointer-events-none order-1 select-none text-sm uppercase text-neutral-400 md:order-none">
                     {item.text}
                   </span>
-                  <Clock size={14} className="text-neutral-400" />
+
+                  <Clock className="size-4 text-neutral-400" />
                 </button>
               </>
             ) : (
               <Link
                 href={item.path}
-                className="flex h-7 w-fit items-center gap-1"
+                className="flex h-8 w-fit items-center gap-2"
               >
-                {pathname === item.path && <MoveRight size={14} />}
+                {pathname === item.path && <MoveRight className="size-4" />}
+
                 <span
                   className={clsx(
-                    'text-[11px] uppercase',
+                    'text-sm uppercase',
                     pathname === item.path
                       ? 'text-neutral-50'
                       : 'text-neutral-400 transition-colors duration-500 hover:text-neutral-50',

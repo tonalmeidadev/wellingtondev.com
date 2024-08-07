@@ -13,11 +13,11 @@ export async function Available() {
       className="group flex w-fit sm:max-w-none sm:items-center"
       target="_blank"
     >
-      <div className="mt-[3px] flex size-[9px] items-center justify-center rounded-full bg-neutral-800 sm:mt-0">
-        <div className="size-[7px] animate-ping rounded-full bg-neutral-50" />
+      <div className="grid size-[1.125rem] flex-none items-center rounded-full bg-neutral-800 sm:mt-0">
+        <div className="mx-auto size-2 animate-ping rounded-full bg-neutral-50" />
       </div>
 
-      <span className="ml-1.5 text-[13px] leading-4 tracking-wide text-neutral-400 transition-all duration-500 hover:text-neutral-50 group-hover:ml-2.5">
+      <span className="ml-1.5 leading-4 tracking-wide text-neutral-400 transition-all duration-500 hover:text-neutral-50 group-hover:ml-2.5">
         {dictionary.home.available} — {currentDate}
       </span>
     </Link>

@@ -6,8 +6,8 @@ export async function Biography() {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2">
       <div className="flex flex-col gap-4">
-        <p className="text-sm leading-5">{dictionary.biography.one}</p>
-        <p className="text-sm leading-5">{dictionary.biography.two}</p>
+        <p className="leading-6">{dictionary.biography.one}</p>
+        <p className="leading-6">{dictionary.biography.two}</p>
       </div>
     </section>
   )

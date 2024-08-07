@@ -39,18 +39,12 @@ const config: Config = {
           '75%, 95%': { opacity: '1', transform: 'translateY(0)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        'compass-date': {
-          '0%': { transform: 'scale(1) rotate(0deg)' },
-          '50%': { transform: 'scale(1) rotate(80deg)' },
-          '100%': { transform: 'scale(1) rotate(-180deg)' },
-        },
       },
       animation: {
         'step-1': 'step-1 8s linear infinite',
         'step-2': 'step-2 8s linear infinite',
         'slide-date-s': 'slide-date-s 8s linear infinite',
         'slide-date-e': 'slide-date-e 8s linear infinite',
-        'compass-date': 'compass-date 2s alternate infinite',
       },
       screens: {
         xs: '512px',

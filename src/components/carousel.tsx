@@ -61,10 +61,10 @@ export function Carousel({ media }: CarouselProps) {
                 ) : (
                   <>
                     <ImageIcon
-                      size={20}
                       strokeWidth={1.25}
-                      className="pointer-events-none absolute right-4 top-4 z-10 text-[11px] uppercase text-neutral-400"
+                      className="pointer-events-none absolute right-4 top-4 z-10 size-6 uppercase text-neutral-400"
                     />
+
                     <Image
                       src={item.url}
                       alt={
@@ -79,7 +79,7 @@ export function Carousel({ media }: CarouselProps) {
                   </>
                 )}
 
-                <span className="pointer-events-none z-10 select-none text-[11px] uppercase text-neutral-50">
+                <span className="pointer-events-none z-10 select-none text-sm uppercase text-neutral-50">
                   {item.title}
                 </span>
               </div>

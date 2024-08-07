@@ -99,14 +99,14 @@ export const enUS = {
           startDate: `Sep'2023`,
           endDate: `Apr'2024`,
           company: 'Invest+ Bradesco',
-          occupation: 'Front-end Web / PWA Developer',
+          occupation: 'Front-end Developer',
         },
         {
           path: 'https://cadastro.agorainvest.com.br/dados-acesso',
           startDate: `Sep'2023`,
           endDate: `Apr'2024`,
           company: 'Ágora Investimentos',
-          occupation: 'Front-end Web / PWA Developer',
+          occupation: 'Front-end Developer',
         },
         {
           path: 'https://parxtech.com.br/',

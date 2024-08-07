@@ -23,10 +23,6 @@ export const metadata: Metadata = {
       },
     ],
   },
-  verification: {
-    google:
-      'google-site-verification=MkGug6uFPgjoDCKWnLIpgp3vhvoBrt3zVKMEAznG1Ck',
-  },
   formatDetection: {
     email: false,
     address: false,

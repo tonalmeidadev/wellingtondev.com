@@ -79,13 +79,11 @@ export default async function ProfilePage() {
               className="group relative overflow-hidden"
             >
               <Link href="https://cal.com/tonalmeidadev" target="_blank">
-                <CalendarPlus
-                  size={14}
-                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transition-transform duration-500 group-hover:-translate-x-8"
-                />
+                <CalendarPlus className="absolute left-1/2 top-1/2 size-5 -translate-x-1/2 -translate-y-1/2 transition-transform duration-500 group-hover:-translate-x-12" />
+
                 <Image
                   src="/assets/cal.webp"
-                  width={18}
+                  width={26}
                   height={10}
                   quality={100}
                   className="pointer-events-none absolute left-1/2 top-1/2 -translate-y-1/2 translate-x-5 select-none transition-transform duration-500 group-hover:-translate-x-1/2"
@@ -95,11 +93,12 @@ export default async function ProfilePage() {
             </Button>
           </div>
 
-          <div className="absolute bottom-3 left-5 right-5 flex max-w-sm flex-col gap-1.5 xs:bottom-5 xs:left-8 xs:right-8 md:bottom-8 lg:left-12 lg:right-12 lg:gap-2">
-            <h1 className="w-3/5 text-lg leading-5 md:w-full">
+          <div className="absolute bottom-3 left-5 right-5 flex max-w-sm flex-col gap-2 xs:bottom-5 xs:left-8 xs:right-8 md:bottom-8 lg:left-12 lg:right-12 lg:gap-4">
+            <h1 className="w-3/5 text-xl leading-5 md:w-full">
               Wellington Almeida, front-end developer
             </h1>
-            <p className="text-sm text-neutral-400">
+
+            <p className="leading-6 text-neutral-400">
               {dictionary.profile.description}
             </p>
           </div>
@@ -107,11 +106,11 @@ export default async function ProfilePage() {
 
         <section className="mt-16 grid grid-cols-1 lg:grid-cols-2">
           <div className="flex flex-col gap-4">
-            <h2 className="text-[11px] uppercase text-neutral-400">About-me</h2>
+            <h2 className="text-sm uppercase text-neutral-400">About-me</h2>
 
             <div className="flex flex-col gap-3">
               {biography.map((item, index) => (
-                <p key={index} className="text-sm leading-5">
+                <p key={index} className="leading-6">
                   {item}
                 </p>
               ))}
@@ -120,14 +119,11 @@ export default async function ProfilePage() {
         </section>
 
         <section className="mt-16 flex flex-col gap-4">
-          <h2 className="text-[11px] uppercase text-neutral-400">Stack</h2>
+          <h2 className="text-sm uppercase text-neutral-400">Stack</h2>
 
           <ul className="grid grid-cols-2 gap-2">
             {stack.map((item, index) => (
-              <li
-                key={index}
-                className="list-inside list-disc text-sm leading-5"
-              >
+              <li key={index} className="list-inside list-disc leading-6">
                 {item}
               </li>
             ))}

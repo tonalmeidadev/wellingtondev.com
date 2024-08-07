@@ -43,9 +43,9 @@ export function Question({ answers }: QuestionProps) {
 
   return (
     <nav className="flex w-full">
-      <ul className="flex w-full flex-col gap-1">
+      <ul className="flex w-full flex-col gap-2">
         {answers.map((item, index) => (
-          <li key={index} className="flex h-12 w-full">
+          <li key={index} className="flex h-14 w-full">
             <Link
               href={item.path}
               target={item.external ? '_blank' : '_self'}
@@ -54,16 +54,13 @@ export function Question({ answers }: QuestionProps) {
               }}
               className="group flex h-full w-full items-center justify-between gap-4 px-3 transition-all duration-500 hover:px-5 focus-visible:px-5"
             >
-              <span className="flex size-4 items-center justify-center text-xs font-medium uppercase text-neutral-600 transition-colors duration-500 group-hover:text-neutral-50 group-focus-visible:text-neutral-50">
+              <span className="flex size-4 items-center justify-center text-sm font-medium uppercase text-neutral-600 transition-colors duration-500 group-hover:text-neutral-50 group-focus-visible:text-neutral-50">
                 {item.idx}
               </span>
 
-              <span className="text-center text-sm leading-4">{item.text}</span>
+              <span className="text-center leading-4">{item.text}</span>
 
-              <MoveRight
-                size={16}
-                className="text-neutral-600 transition-colors duration-500 group-hover:text-neutral-50 group-focus-visible:text-neutral-50"
-              />
+              <MoveRight className="size-5 flex-none text-neutral-600 transition-colors duration-500 group-hover:text-neutral-50 group-focus-visible:text-neutral-50" />
             </Link>
           </li>
         ))}

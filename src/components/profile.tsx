@@ -22,8 +22,8 @@ export async function Profile({ orientation, size }: ProfileProps) {
         quality={100}
         className={clsx(
           'pointer-events-none select-none rounded-full border-2 border-neutral-800 contrast-[110%]',
-          size === 'sm' && 'h-[72px] w-[72px] md:h-12 md:w-12',
-          size === 'lg' && 'h-[64px] w-[64px]',
+          size === 'sm' && 'h-20 w-20 md:h-16 md:w-16',
+          size === 'lg' && 'h-20 w-20',
         )}
         alt="Foto de perfil de Ton Almeida"
       />
@@ -31,8 +31,8 @@ export async function Profile({ orientation, size }: ProfileProps) {
       <div className="flex flex-col">
         <span
           className={clsx(
-            size === 'sm' && 'text-lg md:text-[13px] md:leading-4',
-            size === 'lg' && 'text-base leading-5',
+            size === 'sm' && 'text-lg md:text-base',
+            size === 'lg' && 'text-lg leading-5',
           )}
         >
           Wellington Almeida
@@ -40,8 +40,8 @@ export async function Profile({ orientation, size }: ProfileProps) {
         <span
           className={clsx(
             'text-neutral-400',
-            size === 'sm' && 'text-sm md:text-[11px]',
-            size === 'lg' && 'text-[13px]',
+            size === 'sm' && 'text-base md:text-sm',
+            size === 'lg' && 'text-base',
           )}
         >
           Front-end Developer
