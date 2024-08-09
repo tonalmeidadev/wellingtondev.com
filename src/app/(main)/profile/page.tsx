@@ -86,7 +86,7 @@ export default async function ProfilePage() {
                   width={26}
                   height={10}
                   quality={100}
-                  className="pointer-events-none absolute left-1/2 top-1/2 -translate-y-1/2 translate-x-5 select-none transition-transform duration-500 group-hover:-translate-x-1/2"
+                  className="pointer-events-none absolute left-1/2 top-1/2 -translate-y-1/2 translate-x-6 select-none transition-transform duration-500 group-hover:-translate-x-1/2"
                   alt="Logo de Cal.com"
                 />
               </Link>

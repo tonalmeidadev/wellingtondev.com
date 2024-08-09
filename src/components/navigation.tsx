@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { Clock, MoveRight } from 'lucide-react'
+import { MoveRight } from 'lucide-react'
 import { usePathname } from 'next/navigation'
 import clsx from 'clsx'
 
@@ -9,7 +9,7 @@ export function Navigation() {
   const pathname = usePathname()
 
   const links = [
-    { path: '/home', text: 'Home', disabled: false },
+    { path: '/start', text: 'Start', disabled: false },
     { path: '/profile', text: 'Profile', disabled: false },
     { path: '/works', text: 'Works', disabled: false },
     { path: '/blog', text: 'Blog', disabled: true },
@@ -26,11 +26,9 @@ export function Navigation() {
                   aria-disabled
                   className="flex h-8 items-center gap-2 hover:cursor-not-allowed"
                 >
-                  <span className="pointer-events-none order-1 select-none text-sm uppercase text-neutral-400 md:order-none">
+                  <span className="pointer-events-none order-1 select-none text-sm uppercase text-neutral-400 line-through md:order-none">
                     {item.text}
                   </span>
-
-                  <Clock className="size-4 text-neutral-400" />
                 </button>
               </>
             ) : (

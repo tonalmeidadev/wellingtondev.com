@@ -6,7 +6,6 @@ export const enUS = {
     available: 'Open to work, get in touch',
     name: 'Hello, World!',
     button: 'Schedule a call',
-    copy: 'Copied',
     next: 'Skip',
   },
   profile: {
@@ -14,23 +13,23 @@ export const enUS = {
     description:
       'Development of interfaces for web, mobile apps, PWAs (progressive web apps), support in UI/UX design.',
     biography: [
-      `I was born and raised in São Paulo — SP, I'm 26 years old, full of energy and passion for what I do. I discovered in my teenage years that technology was for me when I enjoyed editing templates on Tumblr using HTML and CSS.`,
+      `Based in São Paulo, Brazil, I'm a Front-end developer with over 3 years of experience. I'm passionate and energetic about my work. My first connection with coding was during my teenage years when I enjoyed editing Tumblr templates using HTML and CSS.`,
       `Throughout my career in technology, I explored other areas related to websites that allowed me to have a broad vision of architecture, development processes, and people. Besides coding, I worked on prototyping and redesigning interfaces, implemented SEO strategies, managed social media, and collaborated in management processes using the Scrum framework.`,
       `My goal is always to focus on the smallest details and create functional and responsive solutions where design, motion, interaction, and accessibility integrate seamlessly.`,
     ],
   },
   answers: {
-    one: `"I heard you're building something amazing"`,
-    two: `"I want to know more about your work"`,
-    three: `"I want a quote for a freelance project"`,
+    a: `I heard you're building something amazing`,
+    b: `I want to see your portfolio`,
+    c: `I want to know more about your career`,
   },
   biography: {
     one: `Hello, I'm Wellington, a Front-end developer who values UX and accessible websites, building digital products and living in São Paulo.`,
-    two: `I specialize in creating websites from scratch and can contribute to projects from design to code in React/Next.js.`,
+    two: `I specialize in building websites from scratch and can contribute to projects from design to code.`,
   },
   works: {
     highlight: {
-      button: 'Featured',
+      button: 'Featured work',
       error: 'Highlighted work not found or defined.',
     },
     titles: {

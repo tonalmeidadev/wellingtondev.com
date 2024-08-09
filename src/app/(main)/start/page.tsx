@@ -4,17 +4,17 @@ import { Biography } from '@/components/biography'
 import { Works } from '@/components/works/works'
 
 export const metadata: Metadata = {
-  title: 'Home',
+  title: 'Start',
   description:
     'Desenvolvedor Front-end que aprecia UX e sites acessíveis, constrói produtos digitais e que vive em São Paulo.',
   openGraph: {
-    title: 'Home — Wellington Almeida | Front-end Developer',
+    title: 'Start — Wellington Almeida | Front-end Developer',
     description:
       'Desenvolvedor Front-end que aprecia UX e sites acessíveis, constrói produtos digitais e que vive em São Paulo.',
     url: 'https://wellingtondev.com',
   },
   alternates: {
-    canonical: 'https://wellingtondev.com/home',
+    canonical: 'https://wellingtondev.com/start',
   },
   robots: {
     index: true,
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function HomePage() {
+export default async function StartPage() {
   const { dictionary } = await getLocaleAndDictionaryServer()
 
   const experiences = dictionary.works.experiences.defaults

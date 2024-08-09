@@ -5,11 +5,11 @@ import { Slot } from '@radix-ui/react-slot'
 import { cva } from 'class-variance-authority'
 
 const button = cva(
-  'group flex gap-1.5 h-10 min-w-10 items-center transition-colors duration-500',
+  'group flex gap-1.5 h-11 min-w-11 rounded-md items-center transition-colors duration-500',
   {
     variants: {
       variant: {
-        primary: 'border-b border-neutral-700 hover:border-neutral-50',
+        primary: 'border border-neutral-700 hover:border-neutral-50',
         secondary:
           'border border-neutral-800 bg-neutral-800 hover:border-neutral-50',
       },

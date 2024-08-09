@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 import { Button } from '@/components/button'
 import { Language } from '@/components/language'
 import { Profile } from '@/components/profile'
-import { AtSign, CalendarPlus, MoveRight } from 'lucide-react'
+import { AtSign, CalendarPlus, Linkedin } from 'lucide-react'
 import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
 import { Question } from '@/components/question'
 
@@ -41,20 +41,17 @@ export default async function StartPage() {
     {
       idx: 'a',
       path: '/work/highlight',
-      external: false,
-      text: dictionary.answers.one,
+      text: dictionary.answers.a,
     },
     {
       idx: 'b',
-      path: '/profile',
-      external: false,
-      text: dictionary.answers.two,
+      path: '/works',
+      text: dictionary.answers.b,
     },
     {
       idx: 'c',
-      path: 'https://api.whatsapp.com/send?phone=5511960245642',
-      external: true,
-      text: dictionary.answers.three,
+      path: '/profile',
+      text: dictionary.answers.c,
     },
   ]
 
@@ -63,15 +60,28 @@ export default async function StartPage() {
       <header className="mb-12 flex flex-col items-center gap-16 md:mb-8">
         <Language currentLocale={locale} />
 
-        <div className="flex flex-col items-center justify-center gap-8 sm:flex-row">
+        <div className="flex w-fit flex-col items-center justify-center gap-6">
           <Profile orientation="row" size="lg" />
 
-          <div className="flex items-center gap-2">
-            <Button asChild className="px-4">
+          <div className="flex w-full items-center gap-2">
+            <Button asChild className="w-full justify-center px-4">
               <Link href="mailto:wellingtondev@icloud.com">
-                <AtSign className="size-4 text-neutral-600 transition-colors duration-500 group-hover:text-neutral-50" />
+                <AtSign className="size-4 text-neutral-50 transition-colors duration-500" />
 
                 <span className="text-sm font-medium uppercase">E-mail</span>
+              </Link>
+            </Button>
+
+            <Button asChild variant="secondary">
+              <Link
+                href="https://www.linkedin.com/in/tonalmeidadev/"
+                target="_blank"
+                className="flex items-center justify-center"
+              >
+                <Linkedin
+                  strokeWidth={0.65}
+                  className="size-4 fill-neutral-50"
+                />
               </Link>
             </Button>
 
@@ -88,7 +98,7 @@ export default async function StartPage() {
                   width={22}
                   height={10}
                   quality={100}
-                  className="pointer-events-none absolute left-1/2 top-1/2 -translate-y-1/2 translate-x-5 select-none transition-transform duration-500 group-hover:-translate-x-1/2"
+                  className="pointer-events-none absolute left-1/2 top-1/2 -translate-y-1/2 translate-x-6 select-none transition-transform duration-500 group-hover:-translate-x-1/2"
                   alt="Logo de Cal.com"
                 />
               </Link>
@@ -103,14 +113,10 @@ export default async function StartPage() {
 
       <footer className="flex w-full flex-col items-center justify-center">
         <Link
-          href="/home"
-          className="group flex h-6 w-fit items-center text-neutral-400 hover:text-neutral-50"
+          href="/start"
+          className="flex h-6 w-fit items-center text-sm uppercase leading-[0.8125rem] tracking-wide text-neutral-400 transition-all duration-500 hover:text-neutral-50"
         >
-          <span className="leading-4 tracking-wide transition-all duration-500">
-            {dictionary.home.next}
-          </span>
-
-          <MoveRight className="ml-2 size-5 transition-all duration-500 group-hover:ml-1" />
+          {dictionary.home.next}
         </Link>
       </footer>
     </div>

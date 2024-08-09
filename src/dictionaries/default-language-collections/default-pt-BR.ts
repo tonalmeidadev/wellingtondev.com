@@ -14,23 +14,23 @@ export const ptBR = {
     description:
       'Desenvolvimento de interfaces para web, aplicativos móveis, pwa (progressive web app), apoio em criações de UI/UX.',
     biography: [
-      `Nasci e cresci em São Paulo — SP, tenho 26 anos de idade, muita energia e paixão pelo que faço. Descobri ainda na minha adolescência que a tecnologia era pra mim quando me divertia editando templates no Tumblr, usando HTML e CSS.`,
+      `Baseado em São Paulo, Brasil, sou desenvolvedor Front-end com +3 anos de experiência, tenho muita energia e paixão pelo que faço. Minha primeira conexão com código foi na minha adolescência, quando me divertia editando templates de Tumblr, usando HTML e CSS.`,
       `Ao longo da minha carreira em tecnologia, explorei outras áreas relacionadas a website que me permitiu ter ampla visão sobre arquitetura, processos de desenvolvimento e pessoas. Além da codificação, atuei na prototipação e re-design de interfaces, implementei estratégias de SEO, lidei com social media e cooperei em processos de gerenciamento com framework Scrum.`,
       `Minha meta é sempre estar focado desde os mínimos detalhes e criar soluções funcionais e responsivas onde design, movimento, interação e acessibilidade se integram perfeitamente.`,
     ],
   },
   answers: {
-    one: `"Soube que você está construindo algo incrível"`,
-    two: `"Quero saber mais sobre seu trabalho"`,
-    three: `"Quero uma cotação para um projeto freelance"`,
+    a: `Soube que você está construindo algo incrível`,
+    b: `Quero ver seu portfólio`,
+    c: `Quero saber mais sobre sua carreira`,
   },
   biography: {
-    one: 'Olá, sou Wellington, um desenvolvedor Front-end que aprecia UX e sites acessíveis, constrói produtos digitais e  que vive em São Paulo.',
-    two: 'Sou especializado em criar websites do zero e posso contribuir com projetos desde o design até o código em React/Next.js.',
+    one: 'Olá, sou Wellington, um desenvolvedor Front-end que aprecia UX e sites acessíveis, constrói produtos digitais e que vive em São Paulo.',
+    two: 'Sou especializado em criar websites do zero e posso contribuir com projetos desde o design até o código.',
   },
   works: {
     highlight: {
-      button: 'Em destaque',
+      button: 'Trabalho em destaque',
       error: 'Trabalho em destaque não encontrado ou definido.',
     },
     titles: {

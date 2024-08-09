@@ -2,7 +2,6 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { Works } from '@/components/works/works'
 import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
-import { MoveRight } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Works',
@@ -34,21 +33,34 @@ export const metadata: Metadata = {
 export default async function WorksPage() {
   const { dictionary } = await getLocaleAndDictionaryServer()
 
-  const projects = dictionary.works.projects.defaults
+  const projectsHighlight = dictionary.works.projects.defaults.filter(
+    (project) => project.highlight,
+  )
+
+  const projects = dictionary.works.projects.defaults.filter(
+    (project) => !project.highlight,
+  )
+
   const volunteering = dictionary.works.projects.volunteering
 
   return (
     <>
-      <Link
-        href="/work/highlight"
-        className="group flex h-6 w-fit items-center hover:text-neutral-50"
-      >
-        <span className="leading-4 tracking-wide transition-all duration-500">
-          {dictionary.works.highlight.button}
-        </span>
-
-        <MoveRight className="ml-2 size-4 transition-all duration-500 group-hover:ml-1" />
-      </Link>
+      <Works.Root title={dictionary.works.highlight.button}>
+        {projectsHighlight.map((item, index) => (
+          <li key={index}>
+            <Works.Hovered asChild>
+              <Link href="/work/highlight">
+                <Works.Item
+                  startDate={item.startDate}
+                  endDate={item.endDate}
+                  company={item.company}
+                  occupation={item.occupation}
+                />
+              </Link>
+            </Works.Hovered>
+          </li>
+        ))}
+      </Works.Root>
 
       <Works.Root title={dictionary.works.titles.works}>
         {projects.map((item, index) => (
