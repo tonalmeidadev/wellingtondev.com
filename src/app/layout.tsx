@@ -1,13 +1,13 @@
 import '@/app/globals.css'
 
 import type { Metadata } from 'next'
-import { clash_display, panchang } from '@/utils/fonts'
+import localFont from 'next/font/local'
 import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
 import { Crosshair } from '@/components/crosshair'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s — Wellington Almeida | Front-end Developer',
+    template: '%s | Wellington Almeida — Front-end Developer',
     default: 'Wellington Almeida | Front-end Developer',
   },
   keywords:
@@ -30,6 +30,11 @@ export const metadata: Metadata = {
   },
 }
 
+const clash_display = localFont({
+  src: '../../public/fonts/ClashDisplay-Variable.ttf',
+  variable: '--font-clash_display',
+})
+
 export default async function RootLayout({
   children,
 }: {
@@ -38,10 +43,7 @@ export default async function RootLayout({
   const { locale } = await getLocaleAndDictionaryServer()
 
   return (
-    <html
-      lang={locale}
-      className={`${clash_display.variable} ${panchang.variable}`}
-    >
+    <html lang={locale} className={clash_display.variable}>
       <body>
         {children}
         <Crosshair />

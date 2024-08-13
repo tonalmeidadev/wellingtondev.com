@@ -1,24 +1,17 @@
 'use client'
 
 import Link from 'next/link'
-import { MoveRight } from 'lucide-react'
 import { usePathname } from 'next/navigation'
-import clsx from 'clsx'
+import { navigation } from '@/utils/content'
+import { MoveRight } from 'lucide-react'
 
 export function Navigation() {
   const pathname = usePathname()
 
-  const links = [
-    { path: '/start', text: 'Start', disabled: false },
-    { path: '/profile', text: 'Profile', disabled: false },
-    { path: '/works', text: 'Works', disabled: false },
-    { path: '/blog', text: 'Blog', disabled: true },
-  ]
-
   return (
     <nav>
       <ul className="flex flex-col items-end md:items-start">
-        {links.map((item, index) => (
+        {navigation.map((item, index) => (
           <li key={index}>
             {item.disabled ? (
               <>
@@ -39,12 +32,8 @@ export function Navigation() {
                 {pathname === item.path && <MoveRight className="size-4" />}
 
                 <span
-                  className={clsx(
-                    'text-sm uppercase',
-                    pathname === item.path
-                      ? 'text-neutral-50'
-                      : 'text-neutral-400 transition-colors duration-500 hover:text-neutral-50',
-                  )}
+                  data-active={pathname === item.path}
+                  className="text-sm uppercase transition-colors duration-500 data-[active=false]:text-neutral-400 data-[active=true]:text-neutral-50 data-[active=false]:hover:text-neutral-50"
                 >
                   {item.text}
                 </span>

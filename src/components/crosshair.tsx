@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion'
-import clsx from 'clsx'
 
 export function Crosshair() {
   const mouseX = useMotionValue(0)
@@ -52,25 +51,23 @@ export function Crosshair() {
 
   return (
     <div
-      className={clsx(
-        'hidden transition-opacity duration-500 md:block',
-        opacity ? 'opacity-0' : 'opacity-100',
-      )}
+      data-opacity={opacity}
+      className="hidden transition-opacity duration-500 data-[opacity=false]:opacity-100 data-[opacity=true]:opacity-0 md:block"
     >
       <motion.div
-        className="pointer-events-none fixed left-0 bg-neutral-300/5"
+        className="pointer-events-none fixed left-0 bg-neutral-100/5"
         style={{ height: topH, top: 0, width: '1px', x: springX }}
       />
       <motion.div
-        className="pointer-events-none fixed left-0 bg-neutral-300/5"
+        className="pointer-events-none fixed left-0 bg-neutral-100/5"
         style={{ height: bottomH, bottom: 0, width: '1px', x: springX }}
       />
       <motion.div
-        className="pointer-events-none fixed top-0 bg-neutral-300/5"
+        className="pointer-events-none fixed top-0 bg-neutral-100/5"
         style={{ width: leftW, left: 0, height: '1px', y: springY }}
       />
       <motion.div
-        className="pointer-events-none fixed top-0 bg-neutral-300/5"
+        className="pointer-events-none fixed top-0 bg-neutral-100/5"
         style={{ width: rightW, right: 0, height: '1px', y: springY }}
       />
     </div>

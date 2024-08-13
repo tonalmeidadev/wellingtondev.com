@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
-import { Works } from '@/components/works/works'
 import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
+import { Hovered } from '@/components/hovered'
 
 export const metadata: Metadata = {
   title: 'Works',
   description:
     'Um pouco mais sobre o que construí durante a minha carreira como desenvolvedor',
   openGraph: {
-    title: 'Works — Wellington Almeida | Front-end Developer',
+    title: 'Works | Wellington Almeida — Front-end Developer',
     description:
       'Um pouco mais sobre o que construí durante a minha carreira como desenvolvedor',
     url: 'https://wellingtondev.com',
@@ -33,94 +33,94 @@ export const metadata: Metadata = {
 export default async function WorksPage() {
   const { dictionary } = await getLocaleAndDictionaryServer()
 
-  const projectsHighlight = dictionary.works.projects.defaults.filter(
-    (project) => project.highlight,
+  const projectsFeatured = dictionary.pages.works.items.defaults.filter(
+    (project) => project.featured,
   )
 
-  const projects = dictionary.works.projects.defaults.filter(
-    (project) => !project.highlight,
+  const projects = dictionary.pages.works.items.defaults.filter(
+    (project) => !project.featured,
   )
 
-  const volunteering = dictionary.works.projects.volunteering
+  const volunteering = dictionary.pages.works.items.volunteering
 
   return (
     <>
-      <Works.Root title={dictionary.works.highlight.button}>
-        {projectsHighlight.map((item, index) => (
+      <Hovered.Root title={dictionary.pages.works.titles.featured}>
+        {projectsFeatured.map((item, index) => (
           <li key={index}>
-            <Works.Hovered asChild>
-              <Link href="/work/highlight">
-                <Works.Item
+            <Hovered.Slot asChild>
+              <Link href="/work/featured">
+                <Hovered.Item
                   startDate={item.startDate}
                   endDate={item.endDate}
                   company={item.company}
                   occupation={item.occupation}
                 />
               </Link>
-            </Works.Hovered>
+            </Hovered.Slot>
           </li>
         ))}
-      </Works.Root>
+      </Hovered.Root>
 
-      <Works.Root title={dictionary.works.titles.works}>
+      <Hovered.Root title={dictionary.pages.works.titles.works}>
         {projects.map((item, index) => (
           <>
             <li key={index}>
               {item.path === '/' ? (
-                <Works.Hovered>
-                  <Works.Item
+                <Hovered.Slot>
+                  <Hovered.Item
                     startDate={item.startDate}
                     endDate={item.endDate}
                     company={item.company}
                     occupation={item.occupation}
                   />
-                </Works.Hovered>
+                </Hovered.Slot>
               ) : (
-                <Works.Hovered asChild>
+                <Hovered.Slot asChild>
                   <Link href={item.path} target="_blank">
-                    <Works.Item
+                    <Hovered.Item
                       startDate={item.startDate}
                       endDate={item.endDate}
                       company={item.company}
                       occupation={item.occupation}
                     />
                   </Link>
-                </Works.Hovered>
+                </Hovered.Slot>
               )}
             </li>
           </>
         ))}
-      </Works.Root>
+      </Hovered.Root>
 
-      <Works.Root title={dictionary.works.titles.volunteering}>
+      <Hovered.Root title={dictionary.pages.works.titles.volunteering}>
         {volunteering.map((item, index) => (
           <>
             <li key={index}>
               {item.path === '/' ? (
-                <Works.Hovered>
-                  <Works.Item
+                <Hovered.Slot>
+                  <Hovered.Item
                     startDate={item.startDate}
                     endDate={item.endDate}
                     company={item.company}
                     occupation={item.occupation}
                   />
-                </Works.Hovered>
+                </Hovered.Slot>
               ) : (
-                <Works.Hovered asChild>
+                <Hovered.Slot asChild>
                   <Link href={item.path} target="_blank">
-                    <Works.Item
+                    <Hovered.Item
                       startDate={item.startDate}
                       endDate={item.endDate}
                       company={item.company}
                       occupation={item.occupation}
                     />
                   </Link>
-                </Works.Hovered>
+                </Hovered.Slot>
               )}
             </li>
           </>
         ))}
-      </Works.Root>
+      </Hovered.Root>
     </>
   )
 }

@@ -11,9 +11,6 @@ const config: Config = {
       clash_display: ['var(--font-clash_display)'],
     },
     extend: {
-      fontFamily: {
-        panchang: ['var(--font-panchang)'],
-      },
       keyframes: {
         'step-1': {
           '0%, 20%': { opacity: '1' },

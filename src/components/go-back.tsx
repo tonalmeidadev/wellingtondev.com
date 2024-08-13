@@ -1,12 +1,9 @@
 'use client'
 
-import { MoveLeft } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-
-interface GoBackProps {
-  label: string
-}
+import { GoBackProps } from '@/types'
+import { MoveLeft } from 'lucide-react'
 
 export function GoBack({ label }: GoBackProps) {
   const router = useRouter()
@@ -15,15 +12,14 @@ export function GoBack({ label }: GoBackProps) {
     <Link
       href="#"
       onClick={(e) => {
-        e.preventDefault() // Evita que o link padrão seja seguido
-        router.back() // Volta uma página no histórico
+        e.preventDefault()
+        router.back()
       }}
       className="flex items-center justify-center gap-1"
       aria-label={label}
     >
       <MoveLeft className="size-4" />
-      <span className="sr-only">{label}</span>{' '}
-      {/* Isso melhora a acessibilidade */}
+      <span className="sr-only">{label}</span>
     </Link>
   )
 }

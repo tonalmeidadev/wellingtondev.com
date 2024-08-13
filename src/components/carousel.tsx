@@ -8,17 +8,8 @@ import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
 import { ImageIcon } from 'lucide-react'
+import { CarouselProps } from '@/types'
 import { Video } from './video'
-
-type CarouselList = {
-  video: boolean
-  url: string
-  title: string | undefined
-}
-
-type CarouselProps = {
-  media: CarouselList[]
-}
 
 export function Carousel({ media }: CarouselProps) {
   const [loading, setLoading] = useState(true)
@@ -75,6 +66,7 @@ export function Carousel({ media }: CarouselProps) {
                       width={655}
                       height={368}
                       className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover object-left-top"
+                      priority
                     />
                   </>
                 )}

@@ -1,8 +1,5 @@
 import { useRef, useEffect } from 'react'
-
-interface HoverVideoProps {
-  src: string
-}
+import { HoverVideoProps } from '@/types'
 
 export function Video({ src }: HoverVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null)

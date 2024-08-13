@@ -3,16 +3,7 @@
 import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 import { MoveRight } from 'lucide-react'
-
-interface AnswersProps {
-  idx: string
-  path: string
-  text: string
-}
-
-interface QuestionProps {
-  answers: AnswersProps[]
-}
+import { QuestionProps } from '@/types'
 
 export function Question({ answers }: QuestionProps) {
   const refs = useRef<(HTMLAnchorElement | null)[]>([])

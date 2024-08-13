@@ -1,21 +1,15 @@
-import { WorkSlide } from './works-slide'
+import { HoveredItemProps } from '@/types'
+import { Hovered } from '.'
 
-interface WorksItemProps {
-  startDate: string
-  endDate: string
-  company: string
-  occupation: string
-}
-
-export function WorksItem({
+export function Item({
   startDate,
   endDate,
   company,
   occupation,
-}: WorksItemProps) {
+}: HoveredItemProps) {
   return (
     <>
-      <WorkSlide startDate={startDate} endDate={endDate} />
+      <Hovered.Slide startDate={startDate} endDate={endDate} />
 
       <div className="grid w-full grid-cols-1 gap-1 xs:gap-1 md:grid-cols-2">
         <span className="order-1 text-sm md:order-none md:text-base">

@@ -3,10 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { i18n, Locale } from '@/config/i18n.config'
 import { createCookie } from '@/config/cookies'
-
-interface LanguageProps {
-  currentLocale: Locale
-}
+import { LanguageProps } from '@/types'
 
 export function Language({ currentLocale }: LanguageProps) {
   const router = useRouter()

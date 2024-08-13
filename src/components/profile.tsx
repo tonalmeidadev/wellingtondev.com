@@ -1,47 +1,45 @@
 import Image from 'next/image'
-import { clsx } from 'clsx'
-
-interface ProfileProps {
-  orientation: 'row' | 'column'
-  size: 'sm' | 'lg'
-}
+import { ProfileProps } from '@/types'
+import { twMerge } from 'tailwind-merge'
 
 export async function Profile({ orientation, size }: ProfileProps) {
   return (
     <div
-      className={clsx(
+      data-orientation={orientation}
+      className={twMerge(
         'flex',
-        orientation === 'row' && 'items-center gap-3',
+        orientation === 'row' && 'items-end gap-4',
         orientation === 'column' && 'flex-col gap-2.5',
       )}
     >
       <Image
-        src="/assets/photo.webp"
-        width={128}
-        height={128}
-        quality={100}
-        className={clsx(
-          'pointer-events-none select-none rounded-full border-2 border-neutral-800 contrast-[110%]',
-          size === 'sm' && 'h-20 w-20 md:h-16 md:w-16',
-          size === 'lg' && 'h-20 w-20',
-        )}
+        src="/assets/resume/photo.webp"
         alt="Foto de perfil de Ton Almeida"
+        width={96}
+        height={96}
+        quality={100}
+        className={twMerge(
+          'pointer-events-none select-none rounded-full border-2 border-neutral-800 contrast-[110%]',
+          size === 'sm' && 'size-20 md:size-16',
+          size === 'lg' && 'size-24',
+        )}
       />
 
-      <div className="flex flex-col">
+      <div className={twMerge('flex flex-col', size === 'lg' && 'gap-0.5')}>
         <span
-          className={clsx(
+          className={twMerge(
             size === 'sm' && 'text-lg md:text-base',
-            size === 'lg' && 'text-lg leading-5',
+            size === 'lg' && 'text-3xl leading-7',
           )}
         >
-          Wellington Almeida
+          Wellington
+          {size === 'lg' ? <br /> : ' '}
+          Almeida
         </span>
         <span
-          className={clsx(
-            'text-neutral-400',
-            size === 'sm' && 'text-base md:text-sm',
-            size === 'lg' && 'text-base',
+          className={twMerge(
+            'text-base text-neutral-400',
+            size === 'sm' && 'md:text-sm',
           )}
         >
           Front-end Developer

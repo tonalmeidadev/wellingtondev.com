@@ -1,27 +1,20 @@
 'use client'
 
-import { ButtonHTMLAttributes } from 'react'
+import { ButtonProps } from '@/types'
 import { Slot } from '@radix-ui/react-slot'
 import { cva } from 'class-variance-authority'
 
 const button = cva(
-  'group flex gap-1.5 h-11 min-w-11 rounded-md items-center transition-colors duration-500',
+  'group flex gap-1.5 h-11 min-w-11 border rounded-md items-center transition-colors duration-500',
   {
     variants: {
       variant: {
-        primary: 'border border-neutral-700 hover:border-neutral-50',
-        secondary:
-          'border border-neutral-800 bg-neutral-800 hover:border-neutral-50',
+        primary: 'border-neutral-700 hover:border-neutral-50',
+        secondary: 'border-neutral-800 bg-neutral-800 hover:border-neutral-50',
       },
     },
   },
 )
-
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  asChild?: boolean
-  className?: string
-  variant?: 'primary' | 'secondary'
-}
 
 export function Button({
   asChild,
