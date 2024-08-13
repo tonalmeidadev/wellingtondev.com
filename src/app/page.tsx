@@ -57,7 +57,7 @@ export default async function HomePage() {
 
             <Button asChild variant="secondary">
               <Link
-                href="https://www.linkedin.com/in/tonalmeidadev/"
+                href="https://www.linkedin.com/in/wellingtondev/"
                 target="_blank"
                 className="flex items-center justify-center"
                 aria-label={dictionary.pages.home.linkedin}
@@ -89,7 +89,7 @@ export default async function HomePage() {
               className="group relative overflow-hidden"
             >
               <Link
-                href="https://cal.com/tonalmeidadev"
+                href="https://cal.com/wellingtondev"
                 target="_blank"
                 aria-label={dictionary.pages.home.schedule}
               >

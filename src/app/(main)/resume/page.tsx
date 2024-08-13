@@ -58,6 +58,7 @@ export default async function ResumePage() {
           height={640}
           quality={100}
           className="pointer-events-none h-[36rem] w-full select-none rounded object-cover object-top md:h-[44rem]"
+          priority
         />
 
         <div className="absolute bottom-5 left-5 right-5 flex max-w-sm flex-col gap-2 xs:bottom-8 xs:left-8 xs:right-8 md:bottom-12 lg:left-12 lg:right-12">
