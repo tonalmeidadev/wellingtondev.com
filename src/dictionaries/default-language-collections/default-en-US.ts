@@ -14,7 +14,7 @@ export const enUS = {
   pages: {
     home: {
       answers: {
-        a: `I heard you're building something amazing`,
+        a: `I heard that you're building something right now`,
         b: `I want to see your portfolio`,
         c: `I want to know more about your career`,
       },
