@@ -14,7 +14,7 @@ export const ptBR = {
   pages: {
     home: {
       answers: {
-        a: `Soube que você está construindo algo agora`,
+        a: `Quero ver o que você está construindo agora`,
         b: `Quero ver seu portfólio`,
         c: `Quero saber mais sobre sua carreira`,
       },
