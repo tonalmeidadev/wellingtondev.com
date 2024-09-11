@@ -55,6 +55,12 @@ export const ptBR = {
       items: {
         defaults: [
           {
+            startDate: `Mar'2023`,
+            endDate: `O momento`,
+            company: 'Clinovi Consultórios',
+            occupation: 'Front-end Developer',
+          },
+          {
             startDate: `Out'2021`,
             endDate: `O momento`,
             company: 'Freelance',

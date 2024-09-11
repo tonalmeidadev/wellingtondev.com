@@ -54,6 +54,12 @@ export const enUS = {
       items: {
         defaults: [
           {
+            startDate: `Mar'2023`,
+            endDate: `Current`,
+            company: 'Clinovi Consultórios',
+            occupation: 'Front-end Developer',
+          },
+          {
             startDate: `Oct'2021`,
             endDate: `Current`,
             company: 'Freelance',
