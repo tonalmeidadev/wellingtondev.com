@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 import { Button } from '@/components/button'
 import { Language } from '@/components/language'
 import { Profile } from '@/components/profile'
-import { AtSign, CalendarPlus, GithubIcon, Linkedin } from 'lucide-react'
+import { AtIcon, CalendarPlusIcon, GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react/ssr'
 import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
 import { Question } from '@/components/question'
 import { answers } from '@/utils/content'
@@ -39,8 +39,8 @@ export default async function HomePage() {
   const { dictionary, locale } = await getLocaleAndDictionaryServer()
 
   return (
-    <div className="m-auto flex min-h-screen w-full max-w-2xl flex-col items-center justify-center px-8">
-      <header className="mb-12 flex flex-col items-center gap-16 md:mb-8">
+    <div className="m-auto flex min-h-screen w-full max-w-lg flex-col items-center justify-center px-8">
+      <header className="mb-12 flex max-w-80 flex-col items-center gap-16 md:mb-8">
         <Language currentLocale={locale} />
 
         <div className="flex w-fit flex-col items-center justify-center gap-6">
@@ -49,9 +49,8 @@ export default async function HomePage() {
           <div className="flex w-full items-center gap-2">
             <Button asChild className="w-full justify-center px-4">
               <Link href="mailto:wellingtondev@icloud.com">
-                <AtSign className="size-4 text-neutral-50 transition-colors duration-500" />
-
-                <span className="text-sm font-medium uppercase">E-mail</span>
+                <AtIcon className="size-5 text-neutral-50 transition-colors" />
+                <span className="lowercase">E-mail</span>
               </Link>
             </Button>
 
@@ -62,9 +61,8 @@ export default async function HomePage() {
                 className="flex items-center justify-center"
                 aria-label={dictionary.pages.home.linkedin}
               >
-                <Linkedin
-                  strokeWidth={0.65}
-                  className="size-4 fill-neutral-50"
+                <LinkedinLogoIcon
+                  className="size-6 fill-neutral-50"
                 />
               </Link>
             </Button>
@@ -76,9 +74,8 @@ export default async function HomePage() {
                 className="flex items-center justify-center"
                 aria-label={dictionary.pages.home.github}
               >
-                <GithubIcon
-                  strokeWidth={0.65}
-                  className="size-4 fill-neutral-50"
+                <GithubLogoIcon
+                  className="size-6 fill-neutral-50"
                 />
               </Link>
             </Button>
@@ -93,14 +90,13 @@ export default async function HomePage() {
                 target="_blank"
                 aria-label={dictionary.pages.home.schedule}
               >
-                <CalendarPlus className="absolute left-1/2 top-1/2 size-4 -translate-x-1/2 -translate-y-1/2 transition-transform duration-500 group-hover:-translate-x-10" />
-
+                <CalendarPlusIcon className="absolute left-1/2 top-1/2 size-6 -translate-x-1/2 -translate-y-1/2 transition-transform group-hover:-translate-x-12" />
                 <Image
                   src="/assets/resume/cal.webp"
                   width={22}
                   height={12}
                   quality={100}
-                  className="pointer-events-none absolute left-1/2 top-1/2 h-3 w-[1.375rem] -translate-y-1/2 translate-x-6 select-none transition-transform duration-500 group-hover:-translate-x-1/2"
+                  className="pointer-events-none absolute left-1/2 top-1/2 h-3.5 w-6 -translate-y-1/2 translate-x-6 select-none transition-transform group-hover:-translate-x-1/2"
                   alt="Logo de Cal.com"
                 />
               </Link>
@@ -109,24 +105,16 @@ export default async function HomePage() {
         </div>
       </header>
 
-      <main className="mb-14 flex w-full max-w-96 flex-col items-center gap-2 sm:max-w-none">
+      <main className="flex w-full max-w-96 flex-col items-center gap-2 sm:max-w-none">
         <Question
           answers={answers(
             dictionary.pages.home.answers.a,
             dictionary.pages.home.answers.b,
             dictionary.pages.home.answers.c,
           )}
+          skip={dictionary.pages.home.skip}
         />
       </main>
-
-      <footer className="flex w-full flex-col items-center justify-center">
-        <Link
-          href="/resume"
-          className="flex h-6 w-fit items-center text-sm uppercase leading-[0.8125rem] tracking-wide text-neutral-400 transition-all duration-500 hover:text-neutral-50"
-        >
-          {dictionary.pages.home.skip}
-        </Link>
-      </footer>
     </div>
   )
 }

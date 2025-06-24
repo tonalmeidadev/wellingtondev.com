@@ -1,11 +1,11 @@
 'use client'
 
-import { ButtonProps } from '@/types'
+import type { ButtonProps } from '@/types'
 import { Slot } from '@radix-ui/react-slot'
 import { cva } from 'class-variance-authority'
 
 const button = cva(
-  'group flex gap-1.5 h-11 min-w-11 border rounded-md items-center transition-colors duration-500',
+  'group flex gap-1.5 h-11 min-w-11 border rounded-md items-center transition-colors',
   {
     variants: {
       variant: {

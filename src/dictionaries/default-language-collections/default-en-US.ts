@@ -14,9 +14,9 @@ export const enUS = {
   pages: {
     home: {
       answers: {
-        a: `I want to see what you are building now.`,
-        b: `I want to see your portfolio`,
-        c: `I want to know more about your career`,
+        a: `I want to see your portfolio`,
+        b: `I want to know more about your career`,
+        c: `Check out one of the most recent projects`,
       },
       linkedin: 'Visit profile on LinkedIn',
       github: 'See more on my GitHub.',
@@ -34,13 +34,8 @@ export const enUS = {
       description:
         'Development of interfaces for web, mobile apps, PWAs (progressive web apps), support in UI/UX design.',
       biography: [
-        `Hello, I'm Wellington, a Front-end developer who values UX and accessible websites, builds digital products, and lives in São Paulo.`,
+        `Hello, I'm Wellington, a frontend developer who values UX and accessible websites, builds digital products, and lives in São Paulo.`,
         `I'm specialized in creating websites from scratch and can contribute to projects from design to code.`,
-        `My goal is always to focus on the smallest details and create functional and responsive solutions where design, motion, interaction, and accessibility integrate seamlessly.`,
-      ],
-      biography_backup: [
-        `Based in São Paulo, Brazil, I'm a Front-end developer with over 3 years of experience, full of energy and passion for what I do. My first connection with code was during my teenage years, when I enjoyed editing Tumblr templates using HTML and CSS.`,
-        `Throughout my career in technology, I explored other areas related to websites that allowed me to have a broad vision of architecture, development processes, and people. Besides coding, I worked on prototyping and redesigning interfaces, implemented SEO strategies, managed social media, and collaborated in management processes using the Scrum framework.`,
         `My goal is always to focus on the smallest details and create functional and responsive solutions where design, motion, interaction, and accessibility integrate seamlessly.`,
       ],
     },
@@ -54,8 +49,14 @@ export const enUS = {
       items: {
         defaults: [
           {
-            startDate: `Mar'2023`,
+            startDate: `May'2025`,
             endDate: `Current`,
+            company: 'ClubIT Solutions',
+            occupation: 'Front-end Developer',
+          },
+          {
+            startDate: `Mar'2024`,
+            endDate: `Apr'2025`,
             company: 'Clinovi Consultórios',
             occupation: 'Front-end Developer',
           },

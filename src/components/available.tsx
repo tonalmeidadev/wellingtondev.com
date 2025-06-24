@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { format } from 'date-fns'
 import { ptBR, enUS } from 'date-fns/locale'
 import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
-import { AvailableProps } from '@/types'
+import type { AvailableProps } from '@/types'
 
 export async function Available({ status }: AvailableProps) {
   const { dictionary, locale } = await getLocaleAndDictionaryServer()
@@ -35,7 +35,7 @@ export async function Available({ status }: AvailableProps) {
         />
       </div>
 
-      <span className="ml-1.5 leading-4 tracking-wide text-neutral-400 transition-all duration-500 hover:text-neutral-50 group-hover:ml-2.5">
+      <span className="ml-1.5 lowercase leading-4 tracking-wide text-neutral-400 transition-all hover:text-neutral-50 group-hover:ml-2.5">
         {available} — {currentDate}
       </span>
     </Link>

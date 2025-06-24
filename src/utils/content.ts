@@ -1,10 +1,10 @@
-import { AnswersProps } from '@/types'
+import type { AnswersProps } from '@/types'
 
 export const answers = (a: string, b: string, c: string): AnswersProps[] => {
   return [
-    { idx: 'a', path: '/work/featured', text: a },
-    { idx: 'b', path: '/works', text: b },
-    { idx: 'c', path: '/resume', text: c },
+    { idx: 'a', path: '/works', text: a },
+    { idx: 'b', path: '/resume', text: b },
+    { idx: 'c', path: '/work/featured', text: c },
   ]
 }
 

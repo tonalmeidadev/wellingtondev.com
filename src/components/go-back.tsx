@@ -2,8 +2,8 @@
 
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-import { GoBackProps } from '@/types'
-import { MoveLeft } from 'lucide-react'
+import type { GoBackProps } from '@/types'
+import { ArrowUUpLeftIcon } from '@phosphor-icons/react/dist/ssr'
 
 export function GoBack({ label }: GoBackProps) {
   const router = useRouter()
@@ -18,7 +18,7 @@ export function GoBack({ label }: GoBackProps) {
       className="flex items-center justify-center gap-1"
       aria-label={label}
     >
-      <MoveLeft className="size-4" />
+      <ArrowUUpLeftIcon className="size-5" />
       <span className="sr-only">{label}</span>
     </Link>
   )

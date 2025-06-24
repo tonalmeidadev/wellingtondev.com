@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation'
 import { i18n, Locale } from '@/config/i18n.config'
 import { createCookie } from '@/config/cookies'
-import { LanguageProps } from '@/types'
+import type { LanguageProps } from '@/types'
 
 export function Language({ currentLocale }: LanguageProps) {
   const router = useRouter()
@@ -14,12 +14,12 @@ export function Language({ currentLocale }: LanguageProps) {
   }
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-3">
       {i18n.locales.map((lng) => (
         <button
           key={lng}
           disabled={currentLocale === lng}
-          className="text-sm uppercase leading-[0.8125rem] text-neutral-400 transition-colors duration-500 disabled:text-neutral-50"
+          className="lowercase text-neutral-400 transition-colors  disabled:text-neutral-50"
           onClick={() => changeLanguage(lng as Locale)}
         >
           {lng === 'en-US' ? 'en-US' : 'pt-BR'}

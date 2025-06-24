@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { HomeIcon } from 'lucide-react'
+import { HouseSimpleIcon } from '@phosphor-icons/react/ssr'
 import { twMerge } from 'tailwind-merge'
-import { NavigationBarProps } from '@/types'
+import type { NavigationBarProps } from '@/types'
 import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
 import { Language } from './language'
 import { GoBack } from './go-back'
@@ -18,7 +18,7 @@ export async function NavigationBar({ className }: NavigationBarProps) {
         className="flex size-4 items-center justify-center gap-1"
         aria-label={dictionary.layout.go_home}
       >
-        <HomeIcon className="size-4" />
+        <HouseSimpleIcon className="size-5" />
       </Link>
 
       <Language currentLocale={locale} />

@@ -6,9 +6,8 @@ import 'swiper/css/navigation'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import type { CarouselProps } from '@/types'
 import { Navigation } from 'swiper/modules'
-import { ImageIcon } from 'lucide-react'
-import { CarouselProps } from '@/types'
 import { Video } from './video'
 
 export function Carousel({ media }: CarouselProps) {
@@ -46,32 +45,25 @@ export function Carousel({ media }: CarouselProps) {
         >
           {media.map((item, index) => (
             <SwiperSlide key={index}>
-              <div className="group relative flex h-72 w-full flex-col items-end justify-end overflow-hidden rounded-md p-4 after:pointer-events-none after:absolute after:bottom-0 after:left-0 after:h-1/3 after:w-full after:bg-gradient-to-t after:from-neutral-950/80 after:transition-colors after:duration-700">
+              <div className="group relative flex h-72 w-full flex-col items-end justify-end overflow-hidden rounded-md p-4 after:pointer-events-none after:absolute after:bottom-0 after:left-0 after:h-1/3 after:w-full after:bg-gradient-to-t after:from-neutral-950/80 after:transition-colors">
                 {item.video ? (
                   <Video src={item.url} />
                 ) : (
-                  <>
-                    <ImageIcon
-                      strokeWidth={1.25}
-                      className="pointer-events-none absolute right-4 top-4 z-10 size-6 uppercase text-neutral-400"
-                    />
-
-                    <Image
-                      src={item.url}
-                      alt={
-                        item.title
-                          ? item.title
-                          : 'Imagem representativa do projeto'
-                      }
-                      width={655}
-                      height={368}
-                      className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover object-left-top"
-                      priority
-                    />
-                  </>
+                  <Image
+                    src={item.url}
+                    alt={
+                      item.title
+                        ? item.title
+                        : 'Imagem representativa do projeto'
+                    }
+                    width={655}
+                    height={368}
+                    className="pointer-events-none absolute inset-0 h-full w-full select-none object-cover object-left-top"
+                    priority
+                  />
                 )}
 
-                <span className="pointer-events-none z-10 select-none text-sm uppercase text-neutral-50">
+                <span className="pointer-events-none z-10 select-none lowercase text-neutral-50">
                   {item.title}
                 </span>
               </div>

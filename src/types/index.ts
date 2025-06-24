@@ -7,7 +7,7 @@ export type AnswersProps = {
   text: string
 }
 
-export interface AvailableProps {
+export type AvailableProps = {
   status: 'on' | 'off'
 }
 
@@ -22,15 +22,16 @@ type CarouselList = {
   url: string
   title: string | undefined
 }
-export interface CarouselProps {
+
+export type CarouselProps = {
   media: CarouselList[]
 }
 
-export interface GoBackProps {
+export type GoBackProps = {
   label: string
 }
 
-export interface HoveredRootProps {
+export type HoveredRootProps = {
   title: string
   children: React.ReactNode
 }
@@ -39,37 +40,38 @@ export interface HoveredSlotProps extends HTMLAttributes<HTMLDivElement> {
   asChild?: boolean
 }
 
-export interface HoveredItemProps {
+export type HoveredItemProps = {
   startDate: string
   endDate: string
   company: string
   occupation: string
 }
 
-export interface HoveredSlideProps {
+export type HoveredSlideProps = {
   startDate: string
   endDate: string
 }
 
-export interface HoverVideoProps {
+export type HoverVideoProps = {
   src: string
 }
 
-export interface NavigationBarProps {
+export type NavigationBarProps = {
   className?: string
 }
 
-export interface LanguageProps {
+export type LanguageProps = {
   currentLocale: Locale
 }
 
-export interface ProfileProps {
+export type ProfileProps = {
   orientation: 'row' | 'column'
   size: 'sm' | 'lg'
 }
 
-export interface QuestionProps {
+export type QuestionProps = {
   answers: AnswersProps[]
+  skip: string
 }
 
 export type WorksFeatured = {

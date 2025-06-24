@@ -5,6 +5,9 @@ const nextConfig = {
     defaultLocale: 'en-US',
     localeDetection: false,
   },
+  experimental: {
+    optimizePackageImports: ["@phosphor-icons/react"],
+  },
 }
 
 export default nextConfig

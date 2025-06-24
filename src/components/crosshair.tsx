@@ -52,7 +52,7 @@ export function Crosshair() {
   return (
     <div
       data-opacity={opacity}
-      className="hidden transition-opacity duration-500 data-[opacity=false]:opacity-100 data-[opacity=true]:opacity-0 md:block"
+      className="hidden transition-opacity  data-[opacity=false]:opacity-100 data-[opacity=true]:opacity-0 md:block"
     >
       <motion.div
         className="pointer-events-none fixed left-0 bg-neutral-100/5"

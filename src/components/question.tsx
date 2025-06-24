@@ -2,8 +2,8 @@
 
 import Link from 'next/link'
 import { useEffect, useRef } from 'react'
-import { MoveRight } from 'lucide-react'
-import { QuestionProps } from '@/types'
+import type { QuestionProps } from '@/types'
+import { ArrowUDownRightIcon } from '@phosphor-icons/react/dist/ssr'
 
 export function Question({ answers }: QuestionProps) {
   const refs = useRef<(HTMLAnchorElement | null)[]>([])
@@ -26,6 +26,7 @@ export function Question({ answers }: QuestionProps) {
     }
 
     window.addEventListener('keydown', handleKeyDown)
+    
     return () => {
       window.removeEventListener('keydown', handleKeyDown)
     }
@@ -33,23 +34,20 @@ export function Question({ answers }: QuestionProps) {
 
   return (
     <nav className="flex w-full justify-center">
-      <ul className="flex w-fit flex-col gap-2">
+      <ul className="flex w-full flex-col gap-2">
         {answers.map((item, index) => (
           <li key={index} className="flex h-14 w-full">
             <Link
-              href={item.path}
               ref={(el) => {
                 refs.current[index] = el
               }}
-              className="group flex h-full w-full items-center gap-5 rounded-md border border-neutral-700 px-6 transition-all duration-500 hover:border-neutral-50 active:border-neutral-50"
+              href={item.path}
+              className="group flex h-full w-full items-center gap-3 rounded-md border border-neutral-700 px-6 transition-all hover:border-neutral-50 active:border-neutral-50 focus-visible:border-neutral-50"
             >
-              <span className="font-medium text-neutral-400 transition-colors duration-500 group-hover:text-neutral-50 group-focus-visible:text-neutral-50">
-                {item.idx}
-              </span>
-
-              <span className="leading-4">{item.text}</span>
-
-              <MoveRight className="ml-auto size-5 flex-none text-neutral-400 transition-colors duration-500 group-hover:text-neutral-50 group-focus-visible:text-neutral-50" />
+              <ArrowUDownRightIcon
+                className="-ml-8 size-5 flex-none text-neutral-50 transition-all opacity-0 group-hover:opacity-100 group-hover:ml-0 group-focus-visible:opacity-100 group-focus-visible:ml-0" 
+              />
+              <span className="leading-4 lowercase">{item.text}</span>
             </Link>
           </li>
         ))}

@@ -43,7 +43,7 @@ export default async function ResumePage() {
       <section className="grid grid-cols-1 md:grid-cols-2">
         <div className="flex flex-col gap-3">
           {biography.map((item, index) => (
-            <p key={index} className="leading-6">
+            <p key={index} className="leading-6 lowercase">
               {item}
             </p>
           ))}
@@ -62,11 +62,11 @@ export default async function ResumePage() {
         />
 
         <div className="absolute bottom-5 left-5 right-5 flex max-w-sm flex-col gap-2 xs:bottom-8 xs:left-8 xs:right-8 md:bottom-12 lg:left-12 lg:right-12">
-          <h1 className="w-60 text-2xl leading-6">
+          <h1 className="w-60 text-2xl leading-6 lowercase">
             Wellington Almeida, front-end developer
           </h1>
 
-          <p className="leading-5 text-neutral-400">
+          <p className="leading-5 lowercase text-neutral-400">
             {dictionary.pages.resume.description}
           </p>
         </div>
@@ -90,11 +90,11 @@ export default async function ResumePage() {
       </section>
 
       <section className="flex flex-col gap-4">
-        <h2 className="text-sm uppercase text-neutral-400">Stack</h2>
+        <h2 className="lowercase text-neutral-400">Stack</h2>
 
         <ul className="grid grid-cols-2 gap-2">
           {stack.map((item, index) => (
-            <li key={index} className="list-inside list-disc leading-6">
+            <li key={index} className="list-inside lowercase list-disc leading-6">
               {item}
             </li>
           ))}

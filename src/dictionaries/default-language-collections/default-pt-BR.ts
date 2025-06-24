@@ -14,9 +14,9 @@ export const ptBR = {
   pages: {
     home: {
       answers: {
-        a: `Quero ver o que você está construindo agora`,
-        b: `Quero ver seu portfólio`,
-        c: `Quero saber mais sobre sua carreira`,
+        a: `Quero ver seu portfólio`,
+        b: `Quero saber mais sobre sua carreira`,
+        c: `Veja um dos últimos projetos contruidos`,
       },
       linkedin: 'Visitar perfil no LinkedIn',
       github: 'Veja mais no meu GitHub',
@@ -34,13 +34,8 @@ export const ptBR = {
       description:
         'Desenvolvimento de interfaces para web, aplicativos móveis, pwa (progressive web app), apoio em criações de UI/UX.',
       biography: [
-        'Olá, sou Wellington, um desenvolvedor Front-end que aprecia UX e sites acessíveis, constrói produtos digitais e que vive em São Paulo.',
+        'Olá, sou Wellington, um desenvolvedor frontend que aprecia UX e sites acessíveis, constrói produtos digitais e que vive em São Paulo.',
         'Sou especializado em criar websites do zero e posso contribuir com projetos desde o design até o código.',
-        `Minha meta é sempre estar focado desde os mínimos detalhes e criar soluções funcionais e responsivas onde design, movimento, interação e acessibilidade se integram perfeitamente.`,
-      ],
-      biography_backup: [
-        `Um desenvolvedor um Front-end que aprecia UX e sites acessíveis, constrói produtos digitais e vive em São Paulo, Brasil. Minha primeira conexão com código foi na minha adolescência, me divertia editando templates de Tumblr usando HTML e CSS.`,
-        `Ao longo da minha jornada em tecnologia, explorei outras áreas que me permitiram ter mais ampla visão sobre arquitetura e processos de desenvolvimento. Além da codificação, atuei na prototipação e re-design de interfaces, implementei estratégias de SEO, lidei com social media e cooperei em processos de gerenciamento com framework Scrum.`,
         `Minha meta é sempre estar focado desde os mínimos detalhes e criar soluções funcionais e responsivas onde design, movimento, interação e acessibilidade se integram perfeitamente.`,
       ],
     },
@@ -55,8 +50,14 @@ export const ptBR = {
       items: {
         defaults: [
           {
-            startDate: `Mar'2023`,
+            startDate: `Mai'2025`,
             endDate: `O momento`,
+            company: 'ClubIT Solutions',
+            occupation: 'Front-end Developer',
+          },
+          {
+            startDate: `Mar'2024`,
+            endDate: `Abr'2025`,
             company: 'Clinovi Consultórios',
             occupation: 'Front-end Developer',
           },

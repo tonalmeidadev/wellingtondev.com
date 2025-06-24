@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
+import type { WorksFeatured } from '@/types'
 import { Carousel } from '@/components/carousel'
 import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
-import { MoveUpRight } from 'lucide-react'
-import { WorksFeatured } from '@/types'
+import { LinkIcon } from '@phosphor-icons/react/dist/ssr'
 import { media, stack_work } from '@/utils/content'
 
 export const metadata: Metadata = {
@@ -43,7 +43,7 @@ export default async function WorksFeaturedPage() {
   if (!work || !work.featured) {
     return (
       <>
-        <h1 className="text-sm">
+        <h1 className="lowercase">
           {dictionary.pages.works.titles.featured_error}
         </h1>
       </>
@@ -52,13 +52,13 @@ export default async function WorksFeaturedPage() {
 
   return (
     <>
-      <section className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-center lg:gap-0">
+      <section className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-0">
         <section className="flex flex-col gap-2">
-          <span className="text-sm">
+          <h1 className="text-lg lowercase">{work.company}</h1>
+
+          <span className="lowercase">
             {work.startDate}, {work.endDate}
           </span>
-
-          <h1 className="text-lg">{work.company}</h1>
         </section>
 
         <Link
@@ -66,11 +66,10 @@ export default async function WorksFeaturedPage() {
           target="_blank"
           className="group flex h-6 w-fit items-center text-neutral-400 hover:text-neutral-50"
         >
-          <span className="leading-4 tracking-wide transition-all duration-500">
+          <span className="leading-4 lowercase tracking-wide transition-all">
             {work.featured.cta}
           </span>
-
-          <MoveUpRight className="ml-1 size-4 transition-all duration-500 group-hover:ml-2" />
+          <LinkIcon className="ml-1 size-5 transition-all group-hover:ml-2" />
         </Link>
       </section>
 
@@ -86,22 +85,22 @@ export default async function WorksFeaturedPage() {
       </section>
 
       <section className="flex flex-col gap-4">
-        <h2 className="text-sm uppercase text-neutral-400">
+        <h2 className="lowercase text-neutral-400">
           {work.featured.description_title}
         </h2>
 
         <div
-          className="leading-6"
+          className="leading-6 lowercase"
           dangerouslySetInnerHTML={{ __html: work.featured.description }}
         />
       </section>
 
       <section className="flex flex-col gap-4">
-        <h2 className="text-sm uppercase text-neutral-400">Stack</h2>
+        <h2 className="lowercase text-neutral-400">Stack</h2>
 
         <ul className="grid grid-cols-2 gap-2">
           {stack_work.map((item, index) => (
-            <li key={index} className="list-inside list-disc leading-6">
+            <li key={index} className="list-inside list-disc lowercase leading-6">
               {item}
             </li>
           ))}

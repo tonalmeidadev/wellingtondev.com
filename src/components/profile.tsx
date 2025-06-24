@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ProfileProps } from '@/types'
+import type { ProfileProps } from '@/types'
 import { twMerge } from 'tailwind-merge'
 
 export async function Profile({ orientation, size }: ProfileProps) {
@@ -8,41 +8,40 @@ export async function Profile({ orientation, size }: ProfileProps) {
       data-orientation={orientation}
       className={twMerge(
         'flex',
-        orientation === 'row' && 'items-end gap-4',
+        orientation === 'row' && 'items-center gap-4',
         orientation === 'column' && 'flex-col gap-2.5',
       )}
     >
       <Image
         src="/assets/resume/photo.webp"
         alt="Foto de perfil de Ton Almeida"
-        width={96}
-        height={96}
+        width={128}
+        height={128}
         quality={100}
         className={twMerge(
           'pointer-events-none select-none rounded-full border-2 border-neutral-800 contrast-[110%]',
-          size === 'sm' && 'size-20 md:size-16',
-          size === 'lg' && 'size-24',
+          size === 'sm' && 'size-24 md:size-20',
+          size === 'lg' && 'size-32',
         )}
       />
 
-      <div className={twMerge('flex flex-col', size === 'lg' && 'gap-0.5')}>
+      <div className="flex flex-col gap-2">
         <span
-          className={twMerge(
-            size === 'sm' && 'text-lg md:text-base',
+          className={twMerge('lowercase',
+            size === 'sm' && 'text-xl !leading-5',
             size === 'lg' && 'text-3xl leading-7',
           )}
         >
-          Wellington
-          {size === 'lg' ? <br /> : ' '}
-          Almeida
+          Wellington de Almeida
         </span>
         <span
           className={twMerge(
-            'text-base text-neutral-400',
-            size === 'sm' && 'md:text-sm',
+            'lowercase text-base text-neutral-400',
+            size === 'sm' && '!leading-4',
+            size === 'lg' && 'text-lg !leading-4',
           )}
         >
-          Front-end Developer
+          Senior Frontend Developer
         </span>
       </div>
     </div>

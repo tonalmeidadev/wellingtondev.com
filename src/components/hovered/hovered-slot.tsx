@@ -1,4 +1,4 @@
-import { HoveredSlotProps } from '@/types'
+import type { HoveredSlotProps } from '@/types'
 import { Slot as RadixSlot } from '@radix-ui/react-slot'
 import { twMerge } from 'tailwind-merge'
 
