@@ -17,7 +17,6 @@ export async function Profile({ orientation, size }: ProfileProps) {
         alt="Foto de perfil de Ton Almeida"
         width={128}
         height={128}
-        quality={100}
         className={twMerge(
           'pointer-events-none select-none rounded-full border-2 border-neutral-800 contrast-[110%]',
           size === 'sm' && 'size-24 md:size-20',

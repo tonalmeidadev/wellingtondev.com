@@ -11,9 +11,11 @@ export default async function middleware(req: NextRequest) {
     locale = defaultLocale
   }
 
-  req.nextUrl.locale = locale
+  const res = NextResponse.next()
 
-  return NextResponse.next()
+  res.headers.set('x-locale', locale)
+
+  return res
 }
 
 export const config = {

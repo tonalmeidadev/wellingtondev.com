@@ -8,7 +8,7 @@ const config: Config = {
   ],
   theme: {
     fontFamily: {
-      clash_display: ['var(--font-clash_display)'],
+      zalando: ['var(--font-zalando)'],
     },
     extend: {
       keyframes: {

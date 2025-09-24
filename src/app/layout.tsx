@@ -1,9 +1,9 @@
 import '@/app/globals.css'
 
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
 import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
 import { Crosshair } from '@/components/crosshair'
+import { zalandoSansExpanded } from '@/utils/fonts'
 
 export const metadata: Metadata = {
   title: {
@@ -30,11 +30,6 @@ export const metadata: Metadata = {
   },
 }
 
-const clash_display = localFont({
-  src: '../../public/fonts/ClashDisplay-Variable.ttf',
-  variable: '--font-clash_display',
-})
-
 export default async function RootLayout({
   children,
 }: {
@@ -43,7 +38,7 @@ export default async function RootLayout({
   const { locale } = await getLocaleAndDictionaryServer()
 
   return (
-    <html lang={locale} className={clash_display.variable}>
+    <html lang={locale} className={zalandoSansExpanded.variable}>
       <body>
         {children}
         <Crosshair />

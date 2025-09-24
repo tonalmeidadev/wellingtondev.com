@@ -15,7 +15,7 @@
 }
 
 body {
-  @apply bg-neutral-900 text-neutral-50 font-clash_display selection:bg-neutral-700;
+  @apply bg-neutral-900 text-neutral-50 font-zalando selection:bg-neutral-700;
 }
 
 a, button {

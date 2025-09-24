@@ -56,7 +56,6 @@ export default async function ResumePage() {
           alt={dictionary.pages.resume.image.alt}
           width={760}
           height={640}
-          quality={100}
           className="pointer-events-none h-[36rem] w-full select-none rounded object-cover object-top md:h-[44rem]"
           priority
         />

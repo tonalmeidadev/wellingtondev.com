@@ -95,7 +95,6 @@ export default async function HomePage() {
                   src="/assets/resume/cal.webp"
                   width={22}
                   height={12}
-                  quality={100}
                   className="pointer-events-none absolute left-1/2 top-1/2 h-3.5 w-6 -translate-y-1/2 translate-x-6 select-none transition-transform group-hover:-translate-x-1/2"
                   alt="Logo de Cal.com"
                 />
