@@ -54,9 +54,9 @@ export default async function WorksFeaturedPage() {
     <>
       <section className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-0">
         <section className="flex flex-col gap-2">
-          <h1 className="text-lg lowercase">{work.company}</h1>
+          <h1 className="lowercase">{work.company}</h1>
 
-          <span className="lowercase">
+          <span className="lowercase text-sm">
             {work.startDate}, {work.endDate}
           </span>
         </section>
@@ -66,7 +66,7 @@ export default async function WorksFeaturedPage() {
           target="_blank"
           className="group flex h-6 w-fit items-center text-neutral-400 hover:text-neutral-50"
         >
-          <span className="leading-4 lowercase tracking-wide transition-all">
+          <span className="leading-4 text-sm lowercase tracking-wide transition-all">
             {work.featured.cta}
           </span>
           <LinkIcon className="ml-1 size-5 transition-all group-hover:ml-2" />
@@ -85,22 +85,22 @@ export default async function WorksFeaturedPage() {
       </section>
 
       <section className="flex flex-col gap-4">
-        <h2 className="lowercase text-neutral-400">
+        <h2 className="lowercase text-sm text-neutral-400">
           {work.featured.description_title}
         </h2>
 
         <div
-          className="leading-6 lowercase"
+          className="leading-5 text-sm lowercase"
           dangerouslySetInnerHTML={{ __html: work.featured.description }}
         />
       </section>
 
       <section className="flex flex-col gap-4">
-        <h2 className="lowercase text-neutral-400">Stack</h2>
+        <h2 className="lowercase text-sm text-neutral-400">Stack</h2>
 
         <ul className="grid grid-cols-2 gap-2">
           {stack_work.map((item, index) => (
-            <li key={index} className="list-inside list-disc lowercase leading-6">
+            <li key={index} className="list-inside list-disc text-sm lowercase leading-6">
               {item}
             </li>
           ))}

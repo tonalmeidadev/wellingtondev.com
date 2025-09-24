@@ -50,7 +50,7 @@ export default async function HomePage() {
             <Button asChild className="w-full justify-center px-4">
               <Link href="mailto:wellingtondev@icloud.com">
                 <AtIcon className="size-5 text-neutral-50 transition-colors" />
-                <span className="lowercase">E-mail</span>
+                <span className="lowercase text-sm">E-mail</span>
               </Link>
             </Button>
 

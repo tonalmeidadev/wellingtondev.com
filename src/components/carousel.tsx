@@ -63,7 +63,7 @@ export function Carousel({ media }: CarouselProps) {
                   />
                 )}
 
-                <span className="pointer-events-none z-10 select-none lowercase text-neutral-50">
+                <span className="pointer-events-none z-10 select-none text-sm lowercase text-neutral-50">
                   {item.title}
                 </span>
               </div>

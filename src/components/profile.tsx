@@ -27,17 +27,19 @@ export async function Profile({ orientation, size }: ProfileProps) {
       <div className="flex flex-col gap-2">
         <span
           className={twMerge('lowercase',
-            size === 'sm' && 'text-xl !leading-5',
-            size === 'lg' && 'text-3xl leading-7',
+            size === 'sm' && 'text-lg !leading-5',
+            size === 'lg' && 'text-2xl leading-7',
           )}
         >
-          Wellington de Almeida
+          Wellington
+          <br />
+          de Almeida
         </span>
         <span
           className={twMerge(
-            'lowercase text-base text-neutral-400',
+            'lowercase text-sm text-neutral-400',
             size === 'sm' && '!leading-4',
-            size === 'lg' && 'text-lg !leading-4',
+            size === 'lg' && 'text-base !leading-4',
           )}
         >
           Senior Frontend Developer

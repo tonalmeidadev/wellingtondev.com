@@ -47,7 +47,7 @@ export function Question({ answers }: QuestionProps) {
               <ArrowUDownRightIcon
                 className="-ml-8 size-5 flex-none text-neutral-50 transition-all opacity-0 group-hover:opacity-100 group-hover:ml-0 group-focus-visible:opacity-100 group-focus-visible:ml-0" 
               />
-              <span className="leading-4 lowercase">{item.text}</span>
+              <span className="leading-4 text-sm lowercase">{item.text}</span>
             </Link>
           </li>
         ))}

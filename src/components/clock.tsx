@@ -21,7 +21,7 @@ export function Clock() {
   })
 
   return (
-    <span className="lowercase leading-[0.8125rem] text-neutral-400">
+    <span className="lowercase text-sm leading-[0.8125rem] text-neutral-400">
       SP, BRA — {isClient ? formattedTime : '00:00:00'}
     </span>
   )

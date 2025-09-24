@@ -64,61 +64,57 @@ export default async function WorksPage() {
 
       <Hovered.Root title={dictionary.pages.works.titles.works}>
         {projects.map((item, index) => (
-          <>
-            <li key={index}>
-              {item.path === '/' ? (
-                <Hovered.Slot>
+          <li key={index}>
+            {item.path === '/' ? (
+              <Hovered.Slot>
+                <Hovered.Item
+                  startDate={item.startDate}
+                  endDate={item.endDate}
+                  company={item.company}
+                  occupation={item.occupation}
+                />
+              </Hovered.Slot>
+            ) : (
+              <Hovered.Slot asChild>
+                <Link href={item.path} target="_blank">
                   <Hovered.Item
                     startDate={item.startDate}
                     endDate={item.endDate}
                     company={item.company}
                     occupation={item.occupation}
                   />
-                </Hovered.Slot>
-              ) : (
-                <Hovered.Slot asChild>
-                  <Link href={item.path} target="_blank">
-                    <Hovered.Item
-                      startDate={item.startDate}
-                      endDate={item.endDate}
-                      company={item.company}
-                      occupation={item.occupation}
-                    />
-                  </Link>
-                </Hovered.Slot>
-              )}
-            </li>
-          </>
+                </Link>
+              </Hovered.Slot>
+            )}
+          </li>
         ))}
       </Hovered.Root>
 
       <Hovered.Root title={dictionary.pages.works.titles.volunteering}>
         {volunteering.map((item, index) => (
-          <>
-            <li key={index}>
-              {item.path === '/' ? (
-                <Hovered.Slot>
+          <li key={index}>
+            {item.path === '/' ? (
+              <Hovered.Slot>
+                <Hovered.Item
+                  startDate={item.startDate}
+                  endDate={item.endDate}
+                  company={item.company}
+                  occupation={item.occupation}
+                />
+              </Hovered.Slot>
+            ) : (
+              <Hovered.Slot asChild>
+                <Link href={item.path} target="_blank">
                   <Hovered.Item
                     startDate={item.startDate}
                     endDate={item.endDate}
                     company={item.company}
                     occupation={item.occupation}
                   />
-                </Hovered.Slot>
-              ) : (
-                <Hovered.Slot asChild>
-                  <Link href={item.path} target="_blank">
-                    <Hovered.Item
-                      startDate={item.startDate}
-                      endDate={item.endDate}
-                      company={item.company}
-                      occupation={item.occupation}
-                    />
-                  </Link>
-                </Hovered.Slot>
-              )}
-            </li>
-          </>
+                </Link>
+              </Hovered.Slot>
+            )}
+          </li>
         ))}
       </Hovered.Root>
     </>

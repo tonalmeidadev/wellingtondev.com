@@ -19,7 +19,7 @@ export default async function LayoutMain({
           <div className="flex flex-col gap-2">
             <Clock />
 
-            <span className="lowercase text-neutral-400 md:hidden">
+            <span className="lowercase text-sm text-neutral-400 md:hidden">
               @2024 — Wellington Almeida
             </span>
           </div>
@@ -34,7 +34,7 @@ export default async function LayoutMain({
         <footer className="flex flex-col gap-4 md:hidden">
           <Clock />
 
-          <span className="lowercase text-neutral-400">
+          <span className="lowercase text-sm text-neutral-400">
             @2024 — Wellington Almeida
           </span>
         </footer>

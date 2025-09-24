@@ -10,13 +10,12 @@ export function Slide({ startDate, endDate }: HoveredSlideProps) {
       </div>
 
       <div className="absolute right-4 flex w-full animate-slide-date-s items-center justify-end gap-1">
-        <span className="lowercase">{startDate}</span>
-
+        <span className="lowercase text-xs">{startDate}</span>
         <ArrowDownIcon className="size-5" />
       </div>
 
       <div className="lowercase absolute right-4 flex w-full animate-slide-date-e items-center justify-end gap-1">
-        <span>{endDate}</span>
+        <span className='text-xs'>{endDate}</span>
 
         {endDate !== 'Current' &&
           endDate !== 'O momento' &&

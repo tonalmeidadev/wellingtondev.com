@@ -19,7 +19,7 @@ export function Navigation() {
                   aria-disabled
                   className="flex h-8 items-center gap-2 hover:cursor-not-allowed"
                 >
-                  <span className="pointer-events-none order-1 select-none lowercase text-neutral-400 line-through md:order-none">
+                  <span className="pointer-events-none order-1 select-none lowercase text-sm text-neutral-400 line-through md:order-none">
                     {item.text}
                   </span>
                 </button>
@@ -33,7 +33,7 @@ export function Navigation() {
 
                 <span
                   data-active={pathname === item.path}
-                  className="lowercase transition-colors  data-[active=false]:text-neutral-400 data-[active=true]:text-neutral-50 data-[active=false]:hover:text-neutral-50"
+                  className="lowercase transition-colors text-sm data-[active=false]:text-neutral-400 data-[active=true]:text-neutral-50 data-[active=false]:hover:text-neutral-50"
                 >
                   {item.text}
                 </span>

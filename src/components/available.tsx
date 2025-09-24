@@ -35,7 +35,7 @@ export async function Available({ status }: AvailableProps) {
         />
       </div>
 
-      <span className="ml-1.5 lowercase leading-4 tracking-wide text-neutral-400 transition-all hover:text-neutral-50 group-hover:ml-2.5">
+      <span className="ml-1.5 lowercase text-sm leading-4 tracking-wide text-neutral-400 transition-all hover:text-neutral-50 group-hover:ml-2.5">
         {available} — {currentDate}
       </span>
     </Link>
