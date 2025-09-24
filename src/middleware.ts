@@ -1,23 +1,25 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { getCookie } from './config/cookies'
-import { i18n } from '@/config/i18n.config'
+import { NextResponse } from "next/server";
 
-export default async function middleware(req: NextRequest) {
-  const { defaultLocale, locales } = i18n
+import { i18n } from "@/config/i18n.config";
 
-  let locale = (await getCookie('NEXT_LOCALE')) || defaultLocale
+import { getCookie } from "./config/cookies";
+
+export default async function middleware() {
+  const { defaultLocale, locales } = i18n;
+
+  let locale = (await getCookie("NEXT_LOCALE")) || defaultLocale;
 
   if (!locales.includes(locale)) {
-    locale = defaultLocale
+    locale = defaultLocale;
   }
 
-  const res = NextResponse.next()
+  const res = NextResponse.next();
 
-  res.headers.set('x-locale', locale)
+  res.headers.set("x-locale", locale);
 
-  return res
+  return res;
 }
 
 export const config = {
-  matcher: ['/((?!api|_next|.*\\..*).*)'],
-}
+  matcher: ["/((?!api|_next|.*\\..*).*)"],
+};

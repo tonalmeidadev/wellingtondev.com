@@ -1,32 +1,33 @@
-import { useRef, useEffect } from 'react'
-import type { HoverVideoProps } from '@/types'
+import { useRef, useEffect } from "react";
+
+import type { HoverVideoProps } from "@/types";
 
 export function Video({ src }: HoverVideoProps) {
-  const videoRef = useRef<HTMLVideoElement>(null)
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       if (videoRef.current) {
-        videoRef.current.play()
+        videoRef.current.play();
       }
-    }, 1000)
+    }, 1000);
 
-    return () => clearTimeout(timer)
-  }, [])
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleMouseEnter = () => {
     if (videoRef.current) {
-      videoRef.current.currentTime = 0
-      videoRef.current.play()
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
     }
-  }
+  };
 
   const handleMouseLeave = () => {
     if (videoRef.current) {
-      videoRef.current.pause()
-      videoRef.current.currentTime = 0
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0;
     }
-  }
+  };
 
   return (
     <video
@@ -36,7 +37,7 @@ export function Video({ src }: HoverVideoProps) {
       controls={false}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="absolute inset-0 h-full w-full select-none object-cover"
+      className="absolute inset-0 h-full w-full object-cover select-none"
     />
-  )
+  );
 }

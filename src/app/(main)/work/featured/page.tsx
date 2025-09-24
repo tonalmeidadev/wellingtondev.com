@@ -1,23 +1,25 @@
-import Link from 'next/link'
-import { Metadata } from 'next'
-import type { WorksFeatured } from '@/types'
-import { Carousel } from '@/components/carousel'
-import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
-import { LinkIcon } from '@phosphor-icons/react/dist/ssr'
-import { media, stack_work } from '@/utils/content'
+import { LinkIcon } from "@phosphor-icons/react/dist/ssr";
+import { Metadata } from "next";
+
+import Link from "next/link";
+
+import { Carousel } from "@/components/carousel";
+import { getLocaleAndDictionaryServer } from "@/config/i18n-helper";
+import type { WorksFeatured } from "@/types";
+import { media, stack_work } from "@/utils/content";
 
 export const metadata: Metadata = {
-  title: 'EBA Escola Bíblica ADAI',
+  title: "EBA Escola Bíblica ADAI",
   description:
-    'Nesse projeto, atuei principalmente como Front-end Developer, contribuindo também para o desenvolvimento da interface visual (UI) e experiência do usuário (UX).',
+    "Nesse projeto, atuei principalmente como Front-end Developer, contribuindo também para o desenvolvimento da interface visual (UI) e experiência do usuário (UX).",
   openGraph: {
-    title: 'EBA Escola Bíblica ADAI | Wellington Almeida — Front-end Developer',
+    title: "EBA Escola Bíblica ADAI | Wellington Almeida — Front-end Developer",
     description:
-      'Nesse projeto, atuei principalmente como Front-end Developer, contribuindo também para o desenvolvimento da interface visual (UI) e experiência do usuário (UX).',
-    url: 'https://wellingtondev.com',
+      "Nesse projeto, atuei principalmente como Front-end Developer, contribuindo também para o desenvolvimento da interface visual (UI) e experiência do usuário (UX).",
+    url: "https://wellingtondev.com",
   },
   alternates: {
-    canonical: 'https://wellingtondev.com/work/featured',
+    canonical: "https://wellingtondev.com/work/featured",
   },
   robots: {
     index: true,
@@ -26,19 +28,19 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-}
+};
 
 export default async function WorksFeaturedPage() {
-  const { dictionary } = await getLocaleAndDictionaryServer()
+  const { dictionary } = await getLocaleAndDictionaryServer();
 
   const work = dictionary.pages.works.items.defaults.find(
     (project: WorksFeatured) => project.featured !== undefined,
-  )
+  );
 
   if (!work || !work.featured) {
     return (
@@ -47,7 +49,7 @@ export default async function WorksFeaturedPage() {
           {dictionary.pages.works.titles.featured_error}
         </h1>
       </>
-    )
+    );
   }
 
   return (
@@ -56,7 +58,7 @@ export default async function WorksFeaturedPage() {
         <section className="flex flex-col gap-2">
           <h1 className="lowercase">{work.company}</h1>
 
-          <span className="lowercase text-sm">
+          <span className="text-sm lowercase">
             {work.startDate}, {work.endDate}
           </span>
         </section>
@@ -66,7 +68,7 @@ export default async function WorksFeaturedPage() {
           target="_blank"
           className="group flex h-6 w-fit items-center text-neutral-400 hover:text-neutral-50"
         >
-          <span className="leading-4 text-sm lowercase tracking-wide transition-all">
+          <span className="text-sm leading-4 tracking-wide lowercase transition-all">
             {work.featured.cta}
           </span>
           <LinkIcon className="ml-1 size-5 transition-all group-hover:ml-2" />
@@ -85,27 +87,30 @@ export default async function WorksFeaturedPage() {
       </section>
 
       <section className="flex flex-col gap-4">
-        <h2 className="lowercase text-sm text-neutral-400">
+        <h2 className="text-sm text-neutral-400 lowercase">
           {work.featured.description_title}
         </h2>
 
         <div
-          className="leading-5 text-sm lowercase"
+          className="text-sm leading-5 lowercase"
           dangerouslySetInnerHTML={{ __html: work.featured.description }}
         />
       </section>
 
       <section className="flex flex-col gap-4">
-        <h2 className="lowercase text-sm text-neutral-400">Stack</h2>
+        <h2 className="text-sm text-neutral-400 lowercase">Stack</h2>
 
         <ul className="grid grid-cols-2 gap-2">
           {stack_work.map((item, index) => (
-            <li key={index} className="list-inside list-disc text-sm lowercase leading-6">
+            <li
+              key={index}
+              className="list-inside list-disc text-sm leading-6 lowercase"
+            >
               {item}
             </li>
           ))}
         </ul>
       </section>
     </>
-  )
+  );
 }

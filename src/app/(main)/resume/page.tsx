@@ -1,21 +1,23 @@
-import Image from 'next/image'
-import { Metadata } from 'next'
-import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
-import { Hovered } from '@/components/hovered'
-import { stack } from '@/utils/content'
+import { Metadata } from "next";
+
+import Image from "next/image";
+
+import { Hovered } from "@/components/hovered";
+import { getLocaleAndDictionaryServer } from "@/config/i18n-helper";
+import { stack } from "@/utils/content";
 
 export const metadata: Metadata = {
-  title: 'Resume',
+  title: "Resume",
   description:
-    'Desenvolvimento de interfaces para web, aplicativos móveis, pwa (progressive web app), apoio em criações de UI/UX.',
+    "Desenvolvimento de interfaces para web, aplicativos móveis, pwa (progressive web app), apoio em criações de UI/UX.",
   openGraph: {
-    title: 'Resume | Wellington Almeida — Front-end Developer',
+    title: "Resume | Wellington Almeida — Front-end Developer",
     description:
-      'Desenvolvimento de interfaces para web, aplicativos móveis, pwa (progressive web app), apoio em criações de UI/UX.',
-    url: 'https://wellingtondev.com',
+      "Desenvolvimento de interfaces para web, aplicativos móveis, pwa (progressive web app), apoio em criações de UI/UX.",
+    url: "https://wellingtondev.com",
   },
   alternates: {
-    canonical: 'https://wellingtondev.com/resume',
+    canonical: "https://wellingtondev.com/resume",
   },
   robots: {
     index: true,
@@ -24,26 +26,26 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       noimageindex: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-}
+};
 
 export default async function ResumePage() {
-  const { dictionary } = await getLocaleAndDictionaryServer()
+  const { dictionary } = await getLocaleAndDictionaryServer();
 
-  const biography = dictionary.pages.resume.biography
-  const experiences = dictionary.pages.experiences.items.defaults
-  const volunteering = dictionary.pages.experiences.items.volunteering
+  const biography = dictionary.pages.resume.biography;
+  const experiences = dictionary.pages.experiences.items.defaults;
+  const volunteering = dictionary.pages.experiences.items.volunteering;
 
   return (
     <>
       <section className="grid grid-cols-1 md:grid-cols-2">
         <div className="flex flex-col gap-3">
           {biography.map((item, index) => (
-            <p key={index} className="leading-5 text-sm lowercase">
+            <p key={index} className="text-sm leading-5 lowercase">
               {item}
             </p>
           ))}
@@ -56,16 +58,16 @@ export default async function ResumePage() {
           alt={dictionary.pages.resume.image.alt}
           width={760}
           height={640}
-          className="pointer-events-none h-[36rem] w-full select-none rounded object-cover object-top md:h-[44rem]"
+          className="pointer-events-none h-144 w-full rounded-sm object-cover object-top select-none md:h-176"
           priority
         />
 
-        <div className="absolute bottom-5 left-5 right-5 flex max-w-sm flex-col gap-2 xs:bottom-8 xs:left-8 xs:right-8 md:bottom-12 lg:left-12 lg:right-12">
+        <div className="xs:bottom-8 xs:left-8 xs:right-8 absolute right-5 bottom-5 left-5 flex max-w-sm flex-col gap-2 md:bottom-12 lg:right-12 lg:left-12">
           <h1 className="w-60 text-xl leading-6 lowercase">
             Wellington Almeida, front-end developer
           </h1>
 
-          <p className="leading-5 text-sm lowercase text-neutral-400">
+          <p className="text-sm leading-5 text-neutral-400 lowercase">
             {dictionary.pages.resume.description}
           </p>
         </div>
@@ -89,11 +91,14 @@ export default async function ResumePage() {
       </section>
 
       <section className="flex flex-col gap-4">
-        <h2 className="lowercase text-sm text-neutral-400">Stack</h2>
+        <h2 className="text-sm text-neutral-400 lowercase">Stack</h2>
 
         <ul className="grid grid-cols-2 gap-2">
           {stack.map((item, index) => (
-            <li key={index} className="list-inside text-sm lowercase list-disc leading-4">
+            <li
+              key={index}
+              className="list-inside list-disc text-sm leading-4 lowercase"
+            >
               {item}
             </li>
           ))}
@@ -117,5 +122,5 @@ export default async function ResumePage() {
         </Hovered.Root>
       </section>
     </>
-  )
+  );
 }

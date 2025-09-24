@@ -1,15 +1,17 @@
-import Image from 'next/image'
-import type { ProfileProps } from '@/types'
-import { twMerge } from 'tailwind-merge'
+import { twMerge } from "tailwind-merge";
+
+import Image from "next/image";
+
+import type { ProfileProps } from "@/types";
 
 export async function Profile({ orientation, size }: ProfileProps) {
   return (
     <div
       data-orientation={orientation}
       className={twMerge(
-        'flex',
-        orientation === 'row' && 'items-center gap-4',
-        orientation === 'column' && 'flex-col gap-2.5',
+        "flex",
+        orientation === "row" && "items-center gap-4",
+        orientation === "column" && "flex-col gap-2.5",
       )}
     >
       <Image
@@ -18,17 +20,18 @@ export async function Profile({ orientation, size }: ProfileProps) {
         width={128}
         height={128}
         className={twMerge(
-          'pointer-events-none select-none rounded-full border-2 border-neutral-800 contrast-[110%]',
-          size === 'sm' && 'size-24 md:size-20',
-          size === 'lg' && 'size-32',
+          "pointer-events-none rounded-full border-2 border-neutral-800 contrast-110 select-none",
+          size === "sm" && "size-24 md:size-20",
+          size === "lg" && "size-32",
         )}
       />
 
       <div className="flex flex-col gap-2">
         <span
-          className={twMerge('lowercase',
-            size === 'sm' && 'text-lg !leading-5',
-            size === 'lg' && 'text-2xl leading-7',
+          className={twMerge(
+            "lowercase",
+            size === "sm" && "text-lg leading-5!",
+            size === "lg" && "text-2xl leading-7",
           )}
         >
           Wellington
@@ -37,14 +40,14 @@ export async function Profile({ orientation, size }: ProfileProps) {
         </span>
         <span
           className={twMerge(
-            'lowercase text-sm text-neutral-400',
-            size === 'sm' && '!leading-4',
-            size === 'lg' && 'text-base !leading-4',
+            "text-sm text-neutral-400 lowercase",
+            size === "sm" && "leading-4!",
+            size === "lg" && "text-base leading-4!",
           )}
         >
           Senior Frontend Developer
         </span>
       </div>
     </div>
-  )
+  );
 }

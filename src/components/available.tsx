@@ -1,26 +1,25 @@
-import Link from 'next/link'
-import { format } from 'date-fns'
-import { ptBR, enUS } from 'date-fns/locale'
-import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
-import type { AvailableProps } from '@/types'
+import { format } from "date-fns";
+import { ptBR, enUS } from "date-fns/locale";
+
+import Link from "next/link";
+
+import { getLocaleAndDictionaryServer } from "@/config/i18n-helper";
+import type { AvailableProps } from "@/types";
 
 export async function Available({ status }: AvailableProps) {
-  const { dictionary, locale } = await getLocaleAndDictionaryServer()
+  const { dictionary, locale } = await getLocaleAndDictionaryServer();
 
-  const available = dictionary.layout.available.status[status]
+  const available = dictionary.layout.available.status[status];
 
-  const month = format(new Date(), 'MMM', {
-    locale: locale === 'pt-BR' ? ptBR : enUS,
-  })
+  const month = format(new Date(), "MMM", {
+    locale: locale === "pt-BR" ? ptBR : enUS,
+  });
 
-  const year = format(new Date(), 'yyyy')
+  const year = format(new Date(), "yyyy");
 
-  const currentDate =
-    (locale === 'pt-BR'
-      ? month.charAt(0).toUpperCase() + month.slice(1)
-      : month) +
-    `'` +
-    year
+  const currentDate = `${
+    locale === "pt-BR" ? month.charAt(0).toUpperCase() + month.slice(1) : month
+  }'${year}`;
 
   return (
     <Link
@@ -28,16 +27,16 @@ export async function Available({ status }: AvailableProps) {
       className="group flex w-fit sm:max-w-none sm:items-center"
       target="_blank"
     >
-      <div className="grid size-[1.125rem] flex-none items-center rounded-full bg-neutral-800 sm:mt-0">
+      <div className="grid size-4.5 flex-none items-center rounded-full bg-neutral-800 sm:mt-0">
         <div
           data-status={status}
           className="mx-auto size-2 animate-ping rounded-full bg-neutral-50 data-[status=off]:bg-red-500 data-[status=on]:bg-neutral-50"
         />
       </div>
 
-      <span className="ml-1.5 lowercase text-sm leading-4 tracking-wide text-neutral-400 transition-all hover:text-neutral-50 group-hover:ml-2.5">
+      <span className="ml-1.5 text-sm leading-4 tracking-wide text-neutral-400 lowercase transition-all group-hover:ml-2.5 hover:text-neutral-50">
         {available} — {currentDate}
       </span>
     </Link>
-  )
+  );
 }

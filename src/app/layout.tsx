@@ -1,23 +1,24 @@
-import '@/app/globals.css'
+import "@/app/globals.css";
 
-import type { Metadata } from 'next'
-import { getLocaleAndDictionaryServer } from '@/config/i18n-helper'
-import { Crosshair } from '@/components/crosshair'
-import { zalandoSansExpanded } from '@/utils/fonts'
+import type { Metadata } from "next";
+
+import { Crosshair } from "@/components/crosshair";
+import { getLocaleAndDictionaryServer } from "@/config/i18n-helper";
+import { zalandoSansExpanded } from "@/utils/fonts";
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Wellington Almeida — Front-end Developer',
-    default: 'Wellington Almeida | Front-end Developer',
+    template: "%s | Wellington Almeida — Front-end Developer",
+    default: "Wellington Almeida | Front-end Developer",
   },
   keywords:
-    'sites, web, desenvolvedor, developer, front end, javascript, typescript, react, nextjs, css, tailwind, shadcn ui, radix, motion, ux, ui, redux, storybook',
-  metadataBase: new URL('https://wellingtondev.com'),
+    "sites, web, desenvolvedor, developer, front end, javascript, typescript, react, nextjs, css, tailwind, shadcn ui, radix, motion, ux, ui, redux, storybook",
+  metadataBase: new URL("https://wellingtondev.com"),
   openGraph: {
-    type: 'website',
+    type: "website",
     images: [
       {
-        url: '/assets/og-image.webp',
+        url: "/assets/og-image.webp",
         width: 1200,
         height: 628,
       },
@@ -28,14 +29,14 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-}
+};
 
 export default async function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  const { locale } = await getLocaleAndDictionaryServer()
+  const { locale } = await getLocaleAndDictionaryServer();
 
   return (
     <html lang={locale} className={zalandoSansExpanded.variable}>
@@ -44,5 +45,5 @@ export default async function RootLayout({
         <Crosshair />
       </body>
     </html>
-  )
+  );
 }
