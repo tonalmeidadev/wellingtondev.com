@@ -14,9 +14,9 @@ export const ptBR = {
   pages: {
     home: {
       answers: {
-        a: "Quero ver seu portfólio",
-        b: "Quero saber mais sobre sua carreira",
-        c: "Veja um dos últimos projetos contruidos",
+        a: `Quero ver seu portfólio`,
+        b: `Quero saber mais sobre sua carreira`,
+        c: `Veja um dos últimos projetos`,
       },
       linkedin: "Visitar perfil no LinkedIn",
       github: "Veja mais no meu GitHub",
