@@ -19,7 +19,7 @@ export function Navigation() {
               <>
                 <button
                   aria-disabled
-                  className="flex h-8 items-center gap-2 hover:cursor-not-allowed"
+                  className="flex h-8 cursor-pointer items-center gap-2 hover:cursor-not-allowed"
                 >
                   <span className="pointer-events-none order-1 text-sm text-neutral-400 lowercase line-through select-none md:order-0">
                     {item.text}

@@ -6,7 +6,7 @@ export const enUS = {
     available: {
       status: {
         on: "Open to work, get in touch",
-        off: "Open to work, get in touch",
+        off: "Unavailable for work",
       },
     },
   },

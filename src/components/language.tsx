@@ -20,7 +20,7 @@ export function Language({ currentLocale }: LanguageProps) {
         <button
           key={lng}
           disabled={currentLocale === lng}
-          className="text-sm text-neutral-400 lowercase transition-colors disabled:text-neutral-50"
+          className="cursor-pointer text-sm text-neutral-400 lowercase transition-colors disabled:text-neutral-50"
           onClick={() => changeLanguage(lng as Locale)}
         >
           {lng === "en-US" ? "en-US" : "pt-BR"}

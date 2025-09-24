@@ -6,7 +6,7 @@ import { cva } from "class-variance-authority";
 import type { ButtonProps } from "@/types";
 
 const button = cva(
-  "group flex gap-1.5 h-11 text-sm min-w-11 border rounded-md items-center transition-colors",
+  "group cursor-pointer flex gap-1.5 h-11 text-sm min-w-11 border rounded-md items-center transition-colors",
   {
     variants: {
       variant: {

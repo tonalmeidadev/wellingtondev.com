@@ -6,7 +6,7 @@ export const ptBR = {
     available: {
       status: {
         on: "Aberto para trabalho, entre em contato",
-        off: "Not available for work",
+        off: "Não disponível para trabalho",
       },
     },
   },
@@ -14,9 +14,9 @@ export const ptBR = {
   pages: {
     home: {
       answers: {
-        a: `Quero ver seu portfólio`,
-        b: `Quero saber mais sobre sua carreira`,
-        c: `Veja um dos últimos projetos`,
+        a: "Quero ver seu portfólio",
+        b: "Quero saber mais sobre sua carreira",
+        c: "Veja um dos últimos projetos",
       },
       linkedin: "Visitar perfil no LinkedIn",
       github: "Veja mais no meu GitHub",
