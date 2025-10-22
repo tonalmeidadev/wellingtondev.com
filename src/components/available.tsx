@@ -14,7 +14,6 @@ export async function Available({ status }: AvailableProps) {
   const month = format(new Date(), "MMM", {
     locale: locale === "pt-BR" ? ptBR : enUS,
   });
-
   const year = format(new Date(), "yyyy");
 
   const currentDate = `${
